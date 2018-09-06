@@ -2,7 +2,7 @@ let isActive = true
 console.log( isActive ) // retorna: true
 
 isActive = false
-console.log( isActive ) // retorna: false
+console.log( isActive + '\n' ) // retorna: false
 
 // TRUTHY
 console.log(!!3) // retorna: true
@@ -11,7 +11,7 @@ console.log(!!' ') // retorna: true
 console.log(!!'texto') // retorna: true
 console.log(!![]) // retorna: true
 console.log(!!{}) // retorna: true
-console.log(!!Infinity) // retorna: true
+console.log(!!Infinity + '\n') // retorna: true
 
 // FALSY
 console.log(!!0) // retorna: false
