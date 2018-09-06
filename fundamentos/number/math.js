@@ -7,6 +7,6 @@ console.log( Math.PI ) // retorna 3.141592653589793
 /*
  * Math.pow() cria uma conta matemática de potência.
  * você deve passar dois parâmetros, o primeiro 
- * sendo o número que que fazer a operação e o
+ * sendo o número que quer fazer a operação e o
  * segundo por quanto você deseja elevar.
 */ 
