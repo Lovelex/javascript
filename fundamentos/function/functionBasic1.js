@@ -19,3 +19,12 @@ console.log( soma( 5 ) ) // retorna: 10
 console.log( soma( 5, 5 ) ) // retorna: 10
 console.log( soma(2, 2) ) // retorna: 4
 console.log( soma( ) ) // retorna: NaN ( undefinied + 5 = NaN )
+
+// Função com retorno: Exemplo 2
+
+function somaEx2( a = 2, b = 2 ){
+    return a + b
+}
+
+console.log( soma(  ) ) // retorna: NaN ( Você DEVE passar ao menos 1 parâmetro )
+console.log( !!soma( 0 ) )
