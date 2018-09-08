@@ -15,7 +15,7 @@ console.log( soma2( 2, 2 ) ) // retorna: 4
 // Arrow Function reduzida atribuida a uma variável
 
 const soma3 = ( a, b ) => a + b
-console.log( soma3( 2, 2 ) ) // retorna: 0
+console.log( soma3( 2, 2 ) ) // retorna: 4
 
 // Arrow Function reduzida com um parâmetro atribuida a uma variável
 
