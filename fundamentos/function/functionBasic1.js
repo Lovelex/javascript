@@ -27,4 +27,3 @@ function somaEx2( a = 2, b = 2 ){
 }
 
 console.log( soma(  ) ) // retorna: NaN ( Você DEVE passar ao menos 1 parâmetro )
-console.log( !!soma( 0 ) )
