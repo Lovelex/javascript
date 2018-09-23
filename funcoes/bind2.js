@@ -28,7 +28,7 @@ function PessoaComBind(){
 
 }
 
-new PessoaComBind
+new PessoaComBind // retorna: uma contagem em 1 segundo com a mensagem 1, 2, 3... ( bind associa a this.PessoaComBind pois esta na próxima camada )
 
 /********************************/
 
@@ -46,4 +46,4 @@ function PessoaComSelf(){
 
 }
 
-new PessoaComSelf
+new PessoaComSelf // retorna: uma contagem em 1 segundo com a mensagem 1, 2, 3... ( self armazena this na camada PessoaComSelf e pode ser atribuidade como o this )
