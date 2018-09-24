@@ -15,8 +15,8 @@ console.log( 'L,E,T,R,A'.split(',')) // retorna [L,E,T,R,A]
  * charAt() retorna a letra contida na palavra de acordo com a posição passada por parâmetro (se a posição não existir, retorna vazio)
  * charCodeAt() retorna o valor da letra em Unicode de acordo com a posição da letra na palavra passada por parâmetro https://unicode-table.com/pt/#control-character
  * indexOf() retorna a posição da letra na palavra de acordo com a letra passada por parâmetro
- * substring() retorna uma quantidade de letras especifica, se 1 valor for passado, retorna da posição ate o fina. Se duas, retorna do parâmetro 1 ate o parâmetro 2
+ * substring() retorna uma quantidade de letras especifica, se 1 valor for passado, retorna da posição ate o final . Se duas, retorna do parâmetro 1 ate o parâmetro 2
  * concat() concatena uma string com outra
  * replace() modifica um valor de uma letra, primeiro parâmetro espera pelo alvo, o segundo prâmetro espera pela letra a ser substituída
- * split() transforma uma string em um array a partir de um separador determindao passado por parâmetro
+ * split() transforma uma string em um array a partir de um separador determinado passado por parâmetro
 */ 
