@@ -1,14 +1,11 @@
-function criarPessoa(){
-    return {
-        nome: 'Lucas',
-        sobrenome: 'Humberto'
+function criarProduto( nome, custo ){
+
+    return { 
+        nome,
+        custo,
+        desconto: 0.1
     }
+
 }
 
-console.log( criarPessoa() ) // retorna: { nome: 'Lucas', sobrenome: 'Humberto' }
-console.log( criarPessoa().nome ) // retorna: Lucas
-console.log( criarPessoa().sobrenome ) // retorna: Humberto
-
-/*
- * Função Factory é uma função que retorna um objeto
-*/ 
+console.log( criarProduto('PenDriverson', 60) )
