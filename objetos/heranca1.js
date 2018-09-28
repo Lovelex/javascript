@@ -17,7 +17,7 @@ console.log( avo.atribZ ) // retorna: Z
  * heranças percorrem em toda a árvore, se filho procurar um atributo 
  * que não tenha em pai mas tenha em avô ele irá retornar esse atributo.
  * 
- * Se houver conflito de nome se atributos, vence aquele que está mais prócimo na hierarquia.
+ * Se houver conflito de nome se atributos, vence aquele que está mais próssimo na hierarquia.
  * 
  * Por padrão, quem está sempre no topo da hierarqui é Object.prototype.
 */ 
