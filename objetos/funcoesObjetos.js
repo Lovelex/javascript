@@ -27,3 +27,9 @@ const o2 = { c: 3, a: 4 }
 Object.assign( destino, o1, o2 )
 
 console.log( destino )
+
+/*
+ * Object.assign() concatena objetos. O primeiro parâmetro é qual sera o alvo da junção,
+ * Os parâmetros seguintes são quais serão os objetos a concatenar.
+ * Chaves de mesmo nome prevalece a última criada
+*/ 
