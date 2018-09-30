@@ -10,7 +10,7 @@ let numeroRetirado = numeros.pop()
 console.log( numeroRetirado ) // retorna: tres
 
 let total = numeros.push( 'três', 'quatro' )
-console.log( total )
+console.log( total ) // retorna: 4
 
 /*
  * push() adiciona um elemento no final do array e retorna a quantidade de elementos do array.
