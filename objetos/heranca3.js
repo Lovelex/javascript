@@ -14,5 +14,6 @@ console.log( filho2.nome, filho2.corCabelo ) // retornar: Klebr preto
 
 for( let key in filho2 ){
     filho2.hasOwnProperty(key) ? 
-        console.log( `Proprietário: ${key}` ) : console.log( `Herdou: ${key}` ) // retorna = Proprietário: nome, Proprietário: idade, Herdou: corCabelo
+        console.log( `Proprietário: ${key}` ) : console.log( `Herdou: ${key}` ) 
+        // retorna = Proprietário: nome, Proprietário: idade, Herdou: corCabelo
 }
