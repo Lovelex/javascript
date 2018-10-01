@@ -1,5 +1,13 @@
-var esportes = ['futebol', 'beisebol'];
-var total = esportes.push('handebol', 'natacao');
+const alunos = [
+    { nome: 'João', nota: 7.3, bolsista: false },
+    { nome: 'Maria', nota: 9.2, bolsista: false },
+    { nome: 'Pedro', nota: 9.8, bolsista: false },
+    { nome: 'Ana', nota: 8.7, bolsista: false }
+]
 
-console.log(esportes); // ['futebol, 'beisebol', 'handebol', 'natacao']
-console.log(total);  // 4
+bolsistas = alunos.map( ( aluno ) => aluno.bolsista ).reduce( ( acu, cur ) => {
+   
+    return acu || cur
+   
+} )
+console.log( bolsistas )

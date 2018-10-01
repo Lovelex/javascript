@@ -4,13 +4,13 @@ console.log( palavra.charAt(4) ) // retorna: A
 console.log( palavra.charAt(5) ) // retorna: 
 console.log( palavra.charCodeAt(4) ) // retorna: 65
 console.log( palavra.indexOf('3') ) // retorna: 1
+console.log( palavra.lastIndexOf('3') ) // retorna: 1
 console.log( palavra.substring(1) ) // retorna: 3TRA
 console.log( palavra.substring( 1, 4 ) ) // retorna: 3TR
 console.log( "L3".concat("TRA") ) // retorna: L3TRA
 console.log( "L3" + "TRA" ) // retorna: L3TRA
 console.log( palavra.replace( 3, 'E' ) ) // retorna: LETRA
 console.log( 'L,E,T,R,A'.split(',')) // retorna [L,E,T,R,A]
-
 /*
  * charAt() retorna a letra contida na palavra de acordo com a posição passada por parâmetro (se a posição não existir, retorna vazio)
  * charCodeAt() retorna o valor da letra em Unicode de acordo com a posição da letra na palavra passada por parâmetro https://unicode-table.com/pt/#control-character
