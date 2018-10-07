@@ -1,37 +1,9 @@
-/*
- * keys()
- * values()
- * entries()
- * setPrototypeOf()
- * defineProperty()
- * hasOwnProperty()
- * create()
- * seal()
- * isSealed()
- * preventExpansions()
- * freeze()
- * isFrozen()
- * 
- * push()
- * pop()
- * shift()
- * unShift()
- * map()
- * join()
- * replace()
- * some()
- * each()
- * forEach()
- * filter()
- * reduce()
- * splice()
- * slice()
- * 
- * toLowerCase()
- * toUpperCase()
- * split()
- * replace()
- * charAt()
- * charCodeAt()
- * substring()
- * indexOf
+let numbers = [ 3, 2, 5, 4, 1 ]
+
+const isBigger  = (numAc, numAt) => numAc > numAt ? numAc : numAt 
+
+console.log( numbers.reduce( isBigger ) )
+
+
+let numeroAcumulado = numeroAcumulado + numeroAtual
+let NumeroAtual = numeroAtual
