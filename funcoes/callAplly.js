@@ -19,4 +19,5 @@ console.log( getPreco.apply( produto, [ 0.15, '$' ] ) ) // retorna : $ 4789.75
 /*
  * Com call ou apply podemos atribuir chaves e valores
  * de objetos em funções com retorno THIS.
+ * Nota: não funciona em arrow Function
 */ 
