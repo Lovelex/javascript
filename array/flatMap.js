@@ -18,20 +18,21 @@ const escola = [{
     }]
 }]
 
-const getNotasAluno = aluno => aluno.nota
+const getNota = aluno => aluno.nota
 
-const getTurma = turma => turma.alunos.map(getNotasAluno)
+const getTurma = turma => turma.alunos.map( getNota )
 
-const nota1 = escola.map(getTurma)
-const notaArray = [] 
+let nota1 = escola.map( getTurma )
+
 console.log( nota1 )
 
-Array.prototype.flatMap = function(callback){
-    return Array.prototype.concat.apply([], this.map(callback))
+Array.prototype.flatMap = function( callback ){
+    return Array.prototype.concat.apply( [], this.map( callback ) )
 }
 
-nota2 = escola.flatMap(getTurma)
-console.log(nota2)
+let nota2 = escola.flatMap( getTurma )
+
+console.log( nota2 )
 
 /*
  * flatMap() é criado para encurtar uma camada de arrays.
