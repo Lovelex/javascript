@@ -1,0 +1,12 @@
+{
+    "funcionario" : {
+        "id": 443,
+        "nome": "Shela",
+        "sobrenome": "Nowell",
+        "email": "snowellca@upenn.edu",
+        "genero": "F",
+        "cidade": "Yufa",
+        "pais": "China",
+        "empresa": "Quinu",
+        "salario": 2435.61 }
+}
