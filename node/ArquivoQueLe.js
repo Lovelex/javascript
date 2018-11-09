@@ -17,6 +17,9 @@ const getDirectoryContent = ( erro, conteudo ) => {
 } 
 fs.readdir( __dirname, 'utf-8', getDirectoryContent ) // retorna o conteúdo do DIRETORIO solicitado de forma ASSÍNCRONA.
 
+const arquivo = require( './ArquivoParaSerLido.json' )
+console.log( arquivo.funcionario.nome ) // retorna o conteudo do ARQUIVO solicitado mais prático
+
 /*
  * FS ou FILE SYSTEM é uma biblioteca do NODE JS que facilita a manipulação de arquivos.
  * fs.readFileSync e fs.readFile serve para ler o arquivo solicitado de forma SÍNCRONA ou ASSINCRONA.
@@ -32,3 +35,5 @@ fs.readdir( __dirname, 'utf-8', getDirectoryContent ) // retorna o conteúdo do 
  * fs.readdirSync e fs.readdir serve para ler o diretório solicitado de forma SÍNCRONA ou ASSINCRONA e os parâmetros
  * e funcionalidade são os mesmos dos exemplos acima.
  */
+
+ 
