@@ -1,12 +1,9 @@
-const frutas = [1,3,5,6,7,9,11]
+function dizerAlgo(algo){
+    console.log(algo)
+}
 
-const firstPair = ( value ) => { 
-    
-    if( value % 2 === 0 ){
-        return value
-    }
+function retornarFuncao( funcao ){
+    return funcao
+}
 
-} 
-
-console.log( frutas.find( firstPair ) )
-
+retornarFuncao( dizerAlgo( 'Trab' ) )

@@ -1,5 +1,5 @@
 (function(){
-    
+
     const _ = require('lodash')
 
     let allChampions= [
