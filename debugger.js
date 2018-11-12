@@ -1,9 +1,7 @@
-function dizerAlgo(algo){
-    console.log(algo)
+obj = { id: 1 }
+
+const getId = (id) => {
+    return obj[id]
 }
 
-function retornarFuncao( funcao ){
-    return funcao
-}
-
-retornarFuncao( dizerAlgo( 'Trab' ) )
+console.log( obj.id )
