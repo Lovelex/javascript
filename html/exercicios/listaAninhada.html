@@ -1,0 +1,53 @@
+<style> span:hover{ cursor: pointer; } </style>
+
+<ul class="tree" >
+    <li>
+    <span > backend </span>
+        <ul >
+            <li>
+            <span wm-element> app </span>
+                <ul >
+                    <li>produto.js</li>
+                    <li>usuario.js</li>
+                    <li>venda.js</li>
+                </ul>
+            </li>
+            <li>
+            <span wm-element> config </span> 
+                <ul >
+                    <li>banco.js</li>
+                    <li>rotas.js</li>
+                    <li>servidor.js</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+    <span wm-element> frontend </span>    
+        <ul >
+            <li >
+            <span wm-element> public </span>
+                <ul >
+                    <li>app.css</li>
+                    <li>app.js</li>
+                    <li>index.html</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+
+<script>
+    document.querySelectorAll('[wm-element]').forEach( ( element ) =>{
+        const filho = element.nextElementSibling
+        const filhoDisplay = filho.style.display
+
+        element.onclick = function(e){
+            filho.style.display = filho.style.display   === 'none' ? 'block' : 'none'
+        }
+    } )
+    
+
+</script>

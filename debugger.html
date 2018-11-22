@@ -1,0 +1,16 @@
+<a href="" class="toggle" > Toggle </a>
+<p id="toggle"> Sumir/Surgir </p>
+
+<script>
+    const button = document.querySelector('.toggle')
+    button.onclick = function(e){
+        const sumir = document.querySelector('#toggle')
+        e.preventDefault()
+        console.log( sumir )
+        if( sumir.style.display === 'none' ){
+            sumir.style.display = 'block'
+        } else {
+            sumir.style.display = 'none'
+        }
+    }
+</script>
