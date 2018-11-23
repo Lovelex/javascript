@@ -1,8 +1,58 @@
 <h1>Formulário</h1>
 <form action="http://127.0.0.1:3003/usuarios" method="POST">
-
+    
     <label for="idName">Nome</label>
+
     <input type="text" name="name" id="idName">
+
+    <label for="idPass" wm-oi> Password </label>
+
+    <input type="password" pass id="idPass" name="password" >
+
+    <div>
+        <input type="radio" name="radio" value="Admin" checked> Admin
+        <input type="radio" name="radio" value="Regular" > Regular
+        <input type="radio" name="radio" value="Convidado"> Convidado
+    </div>
+
+    <textarea name="textArea" cols="30" rows="3" placeholder="Textão" ></textarea>
+
+    <select name="select" >
+        <option value=""> Servidor </option>
+        <option value="br"> BR </option>
+        <option value="na"> NA </option>
+        <option value="euw"> EUW </option>
+    </select>
+
+    <label for="idMultiple"> Selecione </label>
+    <select name="multiple" multiple size="5" id="idMultiple">
+        <option value="br"> BR </option>
+        <option value="na"> NA </option>
+        <option value="euw"> EUW </option>
+    </select>
+
+    <label for="idCheck"> Caixinha </label>
+    <input type="checkbox" id="idCheck" name="checkBox" >
+
     <input type="submit" value="Enviar">
 
 </form>
+
+<style>
+
+    input, label, textarea{
+        margin-bottom: 10px;
+    }
+    #Pass{
+        display: block;
+    }
+    select{
+        display: block;
+        margin-bottom: 10px
+    }
+    input[type=submit]{
+        display: block;
+        margin-bottom: 10px
+    }
+
+</style>
