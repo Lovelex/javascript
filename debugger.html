@@ -1,16 +1,110 @@
-<a href="" class="toggle" > Toggle </a>
-<p id="toggle"> Sumir/Surgir </p>
+<table >
+    <caption> Produtos </caption>
+        <thead>
+            <tr>
+                <th> Nome </th>
+                <th> Preço </th>
+                <th> Quantidade </th>
+                <th> Total </th>
+            </tr>
+        </thead>
+        <Tbody class="border">
+            <tr wm-tr>
+                <td> Ouro </td>
+                <td wm-preco> 25.00 </td>
+                <td wm-quantidade> 4 </td>
+                <td wm-total>  </td>
+            </tr>
+            <tr wm-tr>
+                <td> Prata </td>
+                <td wm-preco> 20.00 </td>
+                <td wm-quantidade> 6 </td>
+                <td wm-total>  </td>
+            </tr>
+            <tr wm-tr>
+                <td> Prata </td>
+                <td wm-preco> 20.00 </td>
+                <td wm-quantidade> 6 </td>
+                <td wm-total>  </td>
+            </tr>
+            <tr wm-tr>
+                    <td> Bronze </td>
+                    <td wm-preco> 15.00 </td>
+                    <td wm-quantidade> 9 </td>
+                    <td wm-total>  </td>
+                </tr>
+                <tr wm-tr>
+                        <td> Bronze </td>
+                        <td wm-preco> 15.00 </td>
+                        <td wm-quantidade> 2 </td>
+                        <td wm-total>  </td>
+                    </tr>
+                    <tr wm-tr>
+                        <td> Bronze </td>
+                        <td wm-preco> 50.00 </td>
+                        <td wm-quantidade> 2 </td>
+                        <td wm-total>  </td>
+                    </tr>
+
+        </Tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3"> Total </td>
+                <td wm-valor></td>
+            </tr>
+        </tfoot>
+</table>
+
+<style>
+
+
+
+table{
+    border-collapse: collapse;
+}
+
+th, td{
+    padding: 5px
+}
+
+tbody.border{
+    border-top: 2px solid gray
+}
+
+tbody tr:hover{
+    background-color: rgb(212, 211, 211);
+}
+
+tfoot{
+    background-color: rgb(87, 87, 87);
+
+}
+tfoot td{
+    font-family: Arial Black;
+}
+
+tfoot td{
+    color: aliceblue;
+}
+
+</style>
 
 <script>
-    const button = document.querySelector('.toggle')
-    button.onclick = function(e){
-        const sumir = document.querySelector('#toggle')
-        e.preventDefault()
-        console.log( sumir )
-        if( sumir.style.display === 'none' ){
-            sumir.style.display = 'block'
-        } else {
-            sumir.style.display = 'none'
-        }
-    }
-</script>
+    
+        totalArr = []
+        document.querySelectorAll('[wm-tr]').forEach( tr => {
+            const preco = tr.querySelector('[wm-preco]').textContent
+            const quantidade = tr.querySelector('[wm-quantidade]').textContent
+            const total = tr.querySelector('[wm-total]')
+    
+            total.innerHTML = preco * quantidade
+        })
+        document.querySelectorAll('[wm-total]').forEach( tr =>{
+            total = tr.textContent.split()
+            totalArr.push(total)
+            
+        } )
+        totalArr = eval( totalArr.join('+') )
+        document.querySelector('[wm-valor]').innerHTML = totalArr
+        
+    </script>
