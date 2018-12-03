@@ -9,3 +9,9 @@ app.post('/usuarios', (req, res) => {
     console.log(req.body)
     res.send('Enviado com sucesso')
 })
+
+app.post('/usuarios/:id', (req, res) => {
+    console.log(req.params.id)
+    console.log(req.body)
+    res.send('Enviado com sucesso')
+})

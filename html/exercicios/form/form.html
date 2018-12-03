@@ -1,6 +1,8 @@
 <h1>Formulário</h1>
-<form action="http://127.0.0.1:3003/usuarios" method="POST">
+<form  method="POST">
     
+    <input type="hidden" name="id" value="3">
+
     <label for="idName">Nome</label>
 
     <input type="text" name="name" id="idName">
@@ -34,7 +36,8 @@
     <label for="idCheck"> Caixinha </label>
     <input type="checkbox" id="idCheck" name="checkBox" >
 
-    <input type="submit" value="Enviar">
+    <button formaction="http://127.0.0.1:3003/usuarios">Enviar Pag 1</button>
+    <button formaction="http://127.0.0.1:3003/usuarios/2">Enviar Pag 2</button>
 
 </form>
 
@@ -50,7 +53,7 @@
         display: block;
         margin-bottom: 10px
     }
-    input[type=submit]{
+    button{
         display: block;
         margin-bottom: 10px
     }

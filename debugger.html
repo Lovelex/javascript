@@ -1,110 +1,40 @@
-<table >
-    <caption> Produtos </caption>
-        <thead>
-            <tr>
-                <th> Nome </th>
-                <th> Preço </th>
-                <th> Quantidade </th>
-                <th> Total </th>
-            </tr>
-        </thead>
-        <Tbody class="border">
-            <tr wm-tr>
-                <td> Ouro </td>
-                <td wm-preco> 25.00 </td>
-                <td wm-quantidade> 4 </td>
-                <td wm-total>  </td>
-            </tr>
-            <tr wm-tr>
-                <td> Prata </td>
-                <td wm-preco> 20.00 </td>
-                <td wm-quantidade> 6 </td>
-                <td wm-total>  </td>
-            </tr>
-            <tr wm-tr>
-                <td> Prata </td>
-                <td wm-preco> 20.00 </td>
-                <td wm-quantidade> 6 </td>
-                <td wm-total>  </td>
-            </tr>
-            <tr wm-tr>
-                    <td> Bronze </td>
-                    <td wm-preco> 15.00 </td>
-                    <td wm-quantidade> 9 </td>
-                    <td wm-total>  </td>
-                </tr>
-                <tr wm-tr>
-                        <td> Bronze </td>
-                        <td wm-preco> 15.00 </td>
-                        <td wm-quantidade> 2 </td>
-                        <td wm-total>  </td>
-                    </tr>
-                    <tr wm-tr>
-                        <td> Bronze </td>
-                        <td wm-preco> 50.00 </td>
-                        <td wm-quantidade> 2 </td>
-                        <td wm-total>  </td>
-                    </tr>
-
-        </Tbody>
-        <tfoot>
-            <tr>
-                <td colspan="3"> Total </td>
-                <td wm-valor></td>
-            </tr>
-        </tfoot>
-</table>
+<p class="chibi">
+    <img src="https://vignette.wikia.nocookie.net/mikagura-school-suite/images/7/71/Shigure-anime_chibi.png/revision/latest?cb=20150210092619" 
+    alt="Imagem chibi" title="Chibi" width="240" height="200">
+</p>
 
 <style>
 
-
-
-table{
-    border-collapse: collapse;
-}
-
-th, td{
-    padding: 5px
-}
-
-tbody.border{
-    border-top: 2px solid gray
-}
-
-tbody tr:hover{
-    background-color: rgb(212, 211, 211);
-}
-
-tfoot{
-    background-color: rgb(87, 87, 87);
-
-}
-tfoot td{
-    font-family: Arial Black;
-}
-
-tfoot td{
-    color: aliceblue;
-}
+    p{
+        position: absolute;   
+      
+    }
+    img{
+        background-position: center;
+        background-size: 80%;
+        background-repeat: no-repeat;
+    }
 
 </style>
 
 <script>
+const chibi = document.querySelector('.chibi')
+
+function move(elem, start, end, frames, callback){
+    const newStart = start - frames
     
-        totalArr = []
-        document.querySelectorAll('[wm-tr]').forEach( tr => {
-            const preco = tr.querySelector('[wm-preco]').textContent
-            const quantidade = tr.querySelector('[wm-quantidade]').textContent
-            const total = tr.querySelector('[wm-total]')
-    
-            total.innerHTML = preco * quantidade
-        })
-        document.querySelectorAll('[wm-total]').forEach( tr =>{
-            total = tr.textContent.split()
-            totalArr.push(total)
-            
-        } )
-        totalArr = eval( totalArr.join('+') )
-        document.querySelector('[wm-valor]').innerHTML = totalArr
-        
-    </script>
+    if(newStart >= end){
+        elem.style.left = newStart + 'px'
+        setTimeout( () => move(elem, newStart, end, frames, callback), 10 )
+    } else {
+        callback()
+    }
+}
+
+move(chibi, 1400, -241, 5, ()=>{})
+console.log(chibi)
+
+
+setInterval( ()=>{ console.log(innerWidth, chibi.clientWidth) },1000 )
+
+</script>

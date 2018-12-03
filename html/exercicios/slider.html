@@ -1,0 +1,123 @@
+<div wm-slider>
+    <p>
+        <img src="http://files.cod3r.com.br/curso-web/imagem1.jpg" 
+            title="Muro da cidade por Tarso Bessa"
+            width="513px" 
+            height="342px"  
+            alt="Pedras na praia">
+    </p>
+
+    <p class="background">
+        <img src="http://files.cod3r.com.br/curso-web/imagem3.png" 
+            title="Imagem transparente"
+            width="513px" 
+            height="342px">
+        
+    </p>
+
+    <p>
+        <img src="http://files.cod3r.com.br/curso-web/imagem2.gif" 
+        width="513"
+        height="342"
+        title="gif"
+        alt="">
+    </p>
+ 
+    <p class="texto">
+        <img src="http://files.cod3r.com.br/curso-web/avatar.jpg" 
+        height="50" alt="Avatar">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget sodales sapien. Praesent a efficitur est, in imperdiet velit. 
+        Quisque et nisi purus. Phasellus accumsan metus et mauris sagittis dignissim. Praesent ac justo vulputate, consectetur neque vitae, 
+        tincidunt neque. Quisque tincidunt arcu ut dolor dignissim pretium. Donec consectetur lacus nec dui pulvinar auctor.
+    </p>
+
+    <p class="imagem"></p>
+
+    <p>
+        <picture>
+            <source srcset="http://files.cod3r.com.br/curso-web/logo-larga.png"
+                media="( min-width: 600px )">
+            <img src="http://files.cod3r.com.br/curso-web/logo-estreita.png" alt="Logo">                
+        </picture>
+    </p>
+</div>
+
+<style>
+
+    p {
+        display: none;
+        position: absolute;
+    }
+
+    .background {
+        background-color: gray;
+        width: 513px;
+        height: 342px;
+    }
+    
+    .texto {
+        width: 500px;
+    }
+
+    .texto img {
+        float: left;
+        margin: 10px;
+    }
+
+    .imagem {
+        width: 513px;
+        height: 342px;
+        background-image: url('http://files.cod3r.com.br/curso-web/imagem4.jpg');
+        background-position: center; /* posição da imagem */
+        background-repeat: no-repeat; /* se a imagem for pequena, não repetir */
+        background-size: 200%; /* proporção que será mostrado a imagem */
+    }
+
+</style>
+
+<script>
+    const mover = (elem, inicio, fim, passo, callback) => {
+        const novoInicio = inicio - passo
+        if(novoInicio >= fim){
+            elem.style.left = novoInicio + 'px'
+            setTimeout(() => mover( elem, novoInicio, fim, passo, callback), 7)
+        } else {
+            callback()
+        }
+    }
+
+    // const p = document.querySelector('[wm-slider] > p')
+    // p.style.display = 'block'
+    // mover( p, 1200, -520, 1, ()=>{
+    //     console.log('Fim')
+    // })
+
+    function slider() {
+        const elementos = document.querySelectorAll('[wm-slider] > p')
+        const slides = Array.from( elementos )
+        exibirSlide( slides, slides[0] )
+
+    }   
+
+    function exibirSlide( slides, slide ) {
+        slide.style.display = 'block'
+
+        const inicio = innerWidth
+        const fim = -slide.clientWidth
+
+        slide.style.left = `${inicio}px`
+
+        mover(slide, inicio, fim, 5, () => {
+            slide.style.display = 'none'
+            exibirSlide( slides, getProximo( slides, slide ) )
+        })
+    }
+
+    function getProximo( lista, atual ) {
+        const i = lista.indexOf(atual) + 1
+        return i < lista.length ? lista[i] : lista[0]
+    }
+
+    slider()
+
+</script>

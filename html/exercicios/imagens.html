@@ -1,0 +1,92 @@
+<h1>Imagens</h1>
+
+<h4> Tag img </h4>
+<p>
+    <img src="http://files.cod3r.com.br/curso-web/imagem1.jpg" 
+        title="Muro da cidade por Tarso Bessa"
+        width="513px" 
+        height="342px"  
+        alt="Pedras na praia">
+</p>
+
+<hr>
+<h4> Tag img com alt </h4>
+<p>
+    <img src="http://files.cod3r.com.br/curso-web/imagem10.jpg" 
+        title="Muro da cidade por Tarso Bessa"
+        width="513px" 
+        height="342px"  
+        alt="Foto não encontrada, Alterada para alt">
+</p>
+
+<hr>
+<h4> Tag img em png </h4>
+<p class="background">
+    <img src="http://files.cod3r.com.br/curso-web/imagem3.png" 
+        title="Imagem transparente"
+        width="513px" 
+        height="342px">
+    
+</p>
+
+<hr>
+<h4> Tag img com gif </h4>
+<p>
+    <img src="http://files.cod3r.com.br/curso-web/imagem2.gif" 
+    width="513"
+    height="342"
+    title="gif"
+    alt="">
+</p>
+
+<hr>
+<h4> Tag img com float </h4>
+<p class="texto">
+    <img src="http://files.cod3r.com.br/curso-web/avatar.jpg" 
+    height="50" alt="Avatar">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget sodales sapien. Praesent a efficitur est, in imperdiet velit. 
+    Quisque et nisi purus. Phasellus accumsan metus et mauris sagittis dignissim. Praesent ac justo vulputate, consectetur neque vitae, 
+    tincidunt neque. Quisque tincidunt arcu ut dolor dignissim pretium. Donec consectetur lacus nec dui pulvinar auctor.
+</p>
+
+<hr>
+<h4> Imagem gerada com CSS </h4>
+<p class="imagem"></p>
+
+<hr>
+<h4> Tag picture </h4>
+<p>
+    <picture>
+        <source srcset="http://files.cod3r.com.br/curso-web/logo-larga.png"
+            media="( min-width: 600px )">
+        <img src="http://files.cod3r.com.br/curso-web/logo-estreita.png" alt="Logo">                
+    </picture>
+</p>
+
+<style>
+
+    .background{
+        background-color: gray;
+        width: 513px;
+        height: 342px;
+    }
+    
+    .texto{
+        width: 500px;
+    }
+
+    .texto img{
+        float: left;
+        margin: 10px;
+    }
+
+    .imagem{
+        width: 513px;
+        height: 342px;
+        background-image: url('http://files.cod3r.com.br/curso-web/imagem4.jpg');
+        background-position: center; /* posição da imagem */
+        background-repeat: no-repeat; /* se a imagem for pequena, não repetir */
+        background-size: 200%; /* proporção que será mostrado a imagem */
+    }
+
+</style>
