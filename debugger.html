@@ -1,40 +1,47 @@
-<p class="chibi">
-    <img src="https://vignette.wikia.nocookie.net/mikagura-school-suite/images/7/71/Shigure-anime_chibi.png/revision/latest?cb=20150210092619" 
-    alt="Imagem chibi" title="Chibi" width="240" height="200">
-</p>
-
+<div class="image" >
+    <img src="http://ddragon.leagueoflegends.com/cdn/8.23.1/img/item/1001.png" alt="">
+    <div class="left"></div>
+    <div class="right"></div>
+</div>
 <style>
-
-    p{
-        position: absolute;   
-      
+    * {
+        margin: 0;
+        padding: 0;
     }
+    
+
+    .image > .left{
+        height: 35px;
+        background-color: aquamarine;
+    }
+
+    .image > .right{
+        height: 35px;
+        background-color: rgb(255, 127, 206);
+    }
+
+
     img{
+        float: right;
+        width: 35px;
+        height: 35px;
         background-position: center;
-        background-size: 80%;
-        background-repeat: no-repeat;
+        background-size: 100%;
     }
 
 </style>
 
 <script>
-const chibi = document.querySelector('.chibi')
 
-function move(elem, start, end, frames, callback){
-    const newStart = start - frames
+const div = document.querySelector('div')
+
+setInterval( () => {
+    const width = innerWidth
+    const fiftyPorcent = (width * 0.50) + 'px'
+
+    div.style.width = fiftyPorcent
     
-    if(newStart >= end){
-        elem.style.left = newStart + 'px'
-        setTimeout( () => move(elem, newStart, end, frames, callback), 10 )
-    } else {
-        callback()
-    }
-}
+}, 1 )
 
-move(chibi, 1400, -241, 5, ()=>{})
-console.log(chibi)
-
-
-setInterval( ()=>{ console.log(innerWidth, chibi.clientWidth) },1000 )
 
 </script>
