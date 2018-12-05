@@ -21,7 +21,7 @@ const colors = {
 const colorFy = ( element ) => {
 
     const tagName = element.tagName.toLowerCase()
-    element.style.color = colors.get( tagName )
+    element.style.borderColor = colors.get( tagName )
 
     if( !element.classList.contains('no-label') ){
         

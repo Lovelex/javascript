@@ -6,8 +6,41 @@
     <title>CSS Selectors</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
-    </style>
+        /* * { color: yellow; background-color: #f77; } Seletor geral */
+
+        /* div{ color: yellow; background-color: #f77; } Seletor de tag */
+
+        /* .tag{ color: yellow; background-color: #f77; } Seletor de classes */
+
+        /* #aprovados{ color: yellow; background-color: #f77; } Seletor de Id's */
+
+        /* [feira]{ color: yellow; background-color: #f77; } Seletor de propriedades */
+
+        /* [feira="casa"]{ color: yellow; background-color: #f77; } Seletor de propriedades com valores */
+
+        /* ul, ol, span, p{ color: yellow; background-color: #f77; } Seletor de vários elementos */
+
+        /* #aninhado > div{ color: yellow; background-color: #f77; } Seletor de filhos */
+
+        /* #aninhado  section{ color: yellow; background-color: #f77; } Seletor de filhos de filhos */
+
+        /* p + ul{ color: yellow; background-color: #f77; } Seletor adjacente (elemento2 é adjacente a elemento1?) */
+
+        /* p ~ ul{ color: yellow; background-color: #f77; } Seleciona todos os ul's a frente de p */
+
+        /* [feira~="empresa"]{ color: yellow; background-color: #f77; } Seleciona propriedades onde contém o valor "empresa" */
+
+        /* [feira*="asa"]{ color: yellow; background-color: #f77; } Seleciona propriedades onde o valor 'asa' está contido */
+        
+        /* ul:nth-child(4){ color: yellow; background-color: #f77; } Seleciona todos os "ul's" filhos que estão na quarta posição (a posição começa em 1) */
+
+        /* section > :nth-child(odd){ color: yellow; background-color: #f77; } Seleciona em section os elementos ímpares (Os números são validados de acordo com sua posição) */
+
+        /* section > :nth-child(even){ color: yellow; background-color: #f77; } Seleciona em section os elementos pares (Os números são validados de acordo com sua posição) */
+
+        /* span:nth-of-type(1){ color: yellow; background-color: #f77; } Seleciona todos os span's que estão na primeira posição */
+
+        </style>
 </head>
 
 <body>
@@ -29,7 +62,7 @@
             </ol>
             <div id='aninhado' class='tag'>
                 <div class="tag">
-                    <section class='tag'>
+                    <section class='tag no-label'>
                         <span class='tag'>1</span>
                         <p class='tag'>2</p>
                         <span class='tag'>3</span>
