@@ -5,12 +5,27 @@
     <meta charset="UTF-8">
     <title>Origem CSS: Externo, Interno e Inline</title>
     <style>
-        /* ... */
+        p{
+            font-size: 30px;
+            font-weight: bold;
+            color: pink;
+            text-shadow: 1px 1px 1px black;
+            letter-spacing: 1px;
+        }
     </style>
+    <link rel="stylesheet" href="css/origem.css">
 </head>
 
 <body>
-    <h1>E agora?</h1>
+    <p class="externa">Css com referência externa (Mais recomendado)</p>
+    <p class="interna">Css com referência interna (Menos recomendado) </p>
+    <p class="inline" style="color:seagreen;">Css com referência inline (Não recomendado)</p>
+    
+    <br>
+
+    <p>Ordem de prioridade - externa, depende se qual foi o último processado entre externa e interna</p>
+    <p>Ordem de prioridade - interna, depende se qual foi o último processado entre externa e interna</p>
+    <p style="color:seagreen;">Ordem de prioridade - inline, sempre será sobreposto</p> 
 </body>
 
 </html>

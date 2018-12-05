@@ -1,0 +1,20 @@
+body {
+    font-size: 40px;
+}
+
+ul, ol {
+    padding: 0;
+}
+
+.tag {
+    border: solid 4px;
+    margin: 10px;
+}
+
+.tag label {
+    color: white;
+    background-color: black;
+    font-size: 25px;
+    vertical-align: top;
+    padding: 0px 5px 3px 3px
+}
