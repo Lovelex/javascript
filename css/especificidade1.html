@@ -13,12 +13,72 @@
             2. Quanto mais especifico for a localidade do elemento, mais valor ele terá
             3. em caso de valores iguais, o último processado ganha
         */
+        
+        p{
+            text-shadow: 2px 2px 2px black;
+            color: aliceblue;
+            font-size: 45px;
+            background-color: darkorange;
+        }
+        
+        p.observacao{
+            background-color: crimson; /* background-color de p.observacao ganha pois foi mais especifico ( 2º regra ) */ 
+        }
+
+        .observacao{
+            background-color: aqua; 
+            border: solid 3px black;
+            padding: 20px
+        }
+        /* ------------------------------------------------------------- */
+        
+        div{
+            text-shadow: 2px 2px 2px black;
+            color: aliceblue;
+            padding: 20px;
+            border: solid 3px  ;
+            font-size: 45px;
+            background:  linear-gradient( to right, cadetblue, blue ) !important; /* !important ganha independente do quanto especifico for pois ele força o processo da cor */
+        }
+        
+        div.importante{
+            padding-left: 0;
+            text-shadow: 2px 2px 2px black;
+            color: aliceblue;
+            padding: 20px;
+            border: solid 3px black ;
+            font-size: 45px;
+            background: linear-gradient( to right, red, orange );
+        }
+        /* ------------------------------------------------------------- */
+        
+        ol.ordem{
+            padding-left: 0;
+            text-shadow: 2px 2px 2px black;
+            color: aliceblue;
+            padding: 20px;
+            border: solid 3px black ;
+            font-size: 45px;
+            background: linear-gradient( to right, red, orange );
+        }
+        
+        ol.ordem{
+            background: linear-gradient( to right, chartreuse, yellow ); /* Quando os valores são iguais, ganha o último carregado */
+            padding-left: 0;
+            text-shadow: 2px 2px 2px black;
+            color: aliceblue;
+            padding: 20px;
+            border: solid 3px black ;
+            font-size: 45px;
+        }
 
     </style>
 </head>
 
 <body>
-    <p class='observacao'>Olha essa observação!!!!</p>
+    <p class='observacao'> Com especificação. </p>
+    <div class="importante"> Com important. </div>
+    <ol class="ordem"> Com ordem. </ol>
 </body>
 
 </html>
