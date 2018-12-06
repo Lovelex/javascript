@@ -9,8 +9,16 @@
             background-color: #222;
         }
 
-        span {
+        span.red {
             color: crimson;
+        }
+
+        span.yellow {
+            color: yellow;
+        }
+
+        span.blue {
+            color: cornflowerblue;
         }
 
         h2 {
@@ -60,8 +68,11 @@
         Para evitar esse comportamento, usa-se clear no próximo elemento apontando o lado no qual
         o elemento seguinte. 
         <br> <br>
-        O elemento <span>vermelho</span> partiu para a direita com float e deixou um espaço em
+        O elemento <span class="red">vermelho</span> partiu para a direita com float e deixou um espaço em
         vazio com clear
+        <br> <br>
+        O elemento <span class="blue">azul</span> partiu para a direita com float como o próximo elemento
+        não possui {clear:right} o elemento <span class="yellow"> <br> amarelo </span> tomou seu lugar
         
     </h2>
 </body>
