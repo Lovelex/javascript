@@ -9,6 +9,10 @@
             height: 100px;
             width: 260px;
             border: solid 3px;
+            overflow: hidden; /* tudo que sobrepor a div vai sumir */
+            overflow: scroll; /* tudo que sobrepor a div vai poder ser visto com scroll do mouse */
+            overflow-x:scroll; /* scroll com controle vertical */
+            overflow-y: hidden; /* para que X e Y funcionem corretamente, um vetor deve estar hidden e o outro scroll ou visible */
         }
     </style>
 </head>

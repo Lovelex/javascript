@@ -5,24 +5,57 @@
     <meta charset="UTF-8">
     <title>Altura e Largura</title>
     <style>
+
+        html{
+            height: 100%; /* Html é o elemento pai de toda aplicação */
+        }
+
         body {
-            font-size: 40px;
-            background-color: coral;
+            margin: 0;
+            height: 100%; /* Se largura for media em %, ela será relativa ao tamanho do pai */
+            font-size: 40px; /*  Se elemento pai não possuir a porcentagem requerida pelo filho, nada acontece */  
+            background-color: coral;   
         }
 
         div {
+            display: inline-block;
+            width: 50%;
             background-color: seagreen;
+            height: 250px;
         }
 
         span {
             background-color: dodgerblue;
+            display: inline-block;
+            width: 50%;
+            height: 250px;
+        }
+
+        h2 {
+            color: rgb(48, 48, 48);
+            width: 50%;
+            font-weight: bold;
+            font-family:  Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            display: inline-block;
+
         }
     </style>
 </head>
 
 <body>
-    <div>Título</div>
-    <span>Subtítulo</span>
+    <div>Título</div><span>Subtítulo</span>
+
+    <h2> 
+        Se largura for media em %, ela será relativa ao tamanho do elemento pai. 
+        Se elemento pai não possuir a porcentagem requerida pelo filho, nada acontece.  
+    </h2><!--
+        Eliminando o espaço com comentário
+    --><h2> 
+        Por padrão, todos os codigos possuem um espaço em branco no final. O espaço será interpretado
+        no documento preenchendo 1% da largura. <br> caso 2 elementos tenham 50% de largura inline-block
+        o calculo será 101% impossibilitando a alinhagem por causa do espaço.
+    </h2>
 </body>
 
 </html>

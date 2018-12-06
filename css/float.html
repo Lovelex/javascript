@@ -9,20 +9,41 @@
             background-color: #222;
         }
 
+        span {
+            color: crimson;
+        }
+
+        h2 {
+            color: rgb(220 , 220, 240);
+            text-shadow: 2px 2px 2px black;
+            width: 600px;
+            font-weight: bold;
+            font-family:  Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+
         .c1 {
+            float: right;
             background-color: red;
         }
 
         .c2 {
+            clear: right;
             background-color: green;
         }
         
         .c3 {
+            float: right;
             background-color: blue;
         }
 
         .c4 {
             background-color: orange;
+        }
+
+        .c1, .c2, .c3, .c4 {
+            width: 150px;
+            height: 150px;
         }
     </style>
 </head>
@@ -32,6 +53,17 @@
     <div class="c2"></div>
     <div class="c3"></div>
     <div class="c4"></div>
+    <h2> 
+        Para fazer um elemento "flutuar" para esquerda ou diretia, usa-se float.
+        Float age de forma similar a {position: absolute}.
+        Quando um elemento chega no destino com float, os elementos em sequencia tomam seu lugar.
+        Para evitar esse comportamento, usa-se clear no próximo elemento apontando o lado no qual
+        o elemento seguinte. 
+        <br> <br>
+        O elemento <span>vermelho</span> partiu para a direita com float e deixou um espaço em
+        vazio com clear
+        
+    </h2>
 </body>
 
 </html>
