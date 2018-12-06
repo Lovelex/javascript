@@ -1,9 +1,14 @@
-function Carro( marca, modelo, ano ){
-    this.marca = marca;
-    this.modelo = modelo;
-    this.ano = ano
-}
+const vue = new Vue({
+    el:'#vue',
+    data: {
+        message:'Hello, Wolrd'
+    }
+})
 
-const meuCarro = new Carro( "Eagle", "Talon TSi", 1993 )
-
-console.log( meuCarro )
+const produto = new Vue({
+    el:'.produto',
+    data:{
+        nome: 'Switch',
+        preco: 1300
+    }
+})

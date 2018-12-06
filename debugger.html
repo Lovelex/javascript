@@ -1,47 +1,16 @@
-<div class="image" >
-    <img src="http://ddragon.leagueoflegends.com/cdn/8.23.1/img/item/1001.png" alt="">
-    <div class="left"></div>
-    <div class="right"></div>
-</div>
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-    }
-    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue Teste</title>
+</head>
+<body>
+    <span id="vue"> {{ message }}  </span>
+    <p class="produto"> O produto: {{ nome }}, Custa: {{ preco }}.</p>
 
-    .image > .left{
-        height: 35px;
-        background-color: aquamarine;
-    }
-
-    .image > .right{
-        height: 35px;
-        background-color: rgb(255, 127, 206);
-    }
-
-
-    img{
-        float: right;
-        width: 35px;
-        height: 35px;
-        background-position: center;
-        background-size: 100%;
-    }
-
-</style>
-
-<script>
-
-const div = document.querySelector('div')
-
-setInterval( () => {
-    const width = innerWidth
-    const fiftyPorcent = (width * 0.50) + 'px'
-
-    div.style.width = fiftyPorcent
-    
-}, 1 )
-
-
-</script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="debugger.js"></script>
+</body>
+</html>

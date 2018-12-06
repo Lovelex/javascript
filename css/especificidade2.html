@@ -6,6 +6,17 @@
     <title>Especificidade CSS</title>
     <style>
         /* https://specificity.keegan.st/ */
+
+        /* Quanto maior a especificidade, maior o falor de processamento */
+
+        body{ font-size: 40px }
+
+        div { background-color: blue }
+        div[wm-cor] { background-color: orange }
+        div.estilo { background-color: green }
+        #unico1, #unico2 { background-color: black }
+        div:hover, #unico:hover { background-color: purple }
+        
     </style>
 </head>
 
