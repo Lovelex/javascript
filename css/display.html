@@ -5,7 +5,50 @@
     <meta charset="UTF-8">
     <title>Display</title>
     <style>
-        /* ... */
+
+        div  { background-color: greenyellow;    }
+        span { background-color: cornflowerblue; }
+        li   { background-color: firebrick;      }
+
+        div  { display: inline-block; }
+        span { display: block;        }
+
+        ul   { padding: 0;      }
+        
+        body{ 
+            background-color: rgb(220, 220, 250);
+            color: white;
+            text-shadow: 1px 1px 1px black;
+            font-size: 30px;
+        }
+
+
+        div, span, li {
+            display: inline-block;
+            width: 200px;
+            text-align: center;
+        }
+
+        .inline {
+            display: inline;
+        }
+
+        .block {
+            display: block;
+        }
+
+        .inline-block {
+            display: inline-block;
+        }
+
+        h2 {
+            color: rgb(48, 48, 48);
+            width: 600px;
+            font-weight: bold;
+            font-family:  Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+
     </style>
 </head>
 
@@ -18,6 +61,31 @@
         <li>Item 2</li>
         <li>Item 3</li>
     </ul>
+    
+    <!-- Testes com display -->
+    
+    <ul>
+        <li class="inline">Inline 1</li>
+        <li class="inline">Inline 2</li>
+        <li class="inline">Inline 3</li>
+    </ul>
+    <ul>
+        <li class="block">block 1</li>
+        <li class="block">block 2</li>
+        <li class="block">block 3</li>
+    </ul>
+    <ul>
+        <li class="inline-block">inline-block 1</li>
+        <li class="inline-block">inline-block 2</li>
+        <li class="inline-block">inline-block 3</li>
+    </ul>
+    <h2> Elementos Inline são organizados em linha e não podem ter 
+    seus valores Width e Heigth alterados
+    </h2>
+
+    <h2> Elementos Block são organizados em coluna e podem ter width e heigth alterados </h2>
+
+    <h2> Elementos Inline-Block são organizados em linha e podem ter width e height alterados </h2>
 </body>
 
 </html>

@@ -4,14 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Herança</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
     <style>
-        /* ... */
+        
+        body {
+            /* Padding e Border, não são herdados por padrão. */
+            padding: 20px;
+            border: solid 2px darkorange;
+            /* ----------------------------- */
+            font-family: 'Noto Sans TC';
+            font-size: 30px;
+
+        }
+
+        div {
+            border: inherit; /* inherit herda o atributo do pai */
+        }
+
+
     </style>
 </head>
 
 <body>
     <h1>Herança</h1>
-    <div>Estou herdando</div>
+    <div>Estou herdando a borda</div>
 </body>
 
 </html>
