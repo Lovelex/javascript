@@ -4,12 +4,43 @@
     <meta charset="UTF-8">
     <title>Unidades #02</title>
     <style>
-        /* ... */
+        div.fora{
+            background-color: rgb(98, 171, 245);
+            border: solid 2px black;
+            width: 270px;
+            height: 270px;
+            padding: 30px;
+            position: relative;
+        }
+        div.dentro {
+            background-color: rgb(238, 129, 129);
+            border: solid 2px black;
+            width: 100%;
+            height: 50px;
+            position: static; /* Relativo ao elemento pai */
+            position: relative; /* Relativo ao elemento pai */
+            position: absolute; /* Relativo ao elemento pai + padding */
+            position: fixed; /* Relativo a innerWidth */
+        }
+
+        h2 {
+            color: rgb(92, 92, 92);
+            text-shadow: 1px 1px 1px black;
+            width: 600px;
+            font-weight: bold;
+            font-family:  Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
     </style>
 </head>
 <body>
     <div class="fora">
         <div class="dentro"></div>
     </div>
+    <h2>
+        Absolute é relativo ao elemento pai caso o elemento pai tenha o atributo position: relative.
+        <br><br>
+        Absolute é relativo ao innerWidth caso o elemento pai não tenha o atributo 
+    </h2>
 </body>
 </html>

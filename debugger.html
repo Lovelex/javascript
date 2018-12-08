@@ -4,13 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Vue Teste</title>
+    <title>Debugger</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        
+        .flex{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .horizontal-bar{
+            background-color: black;
+            height: 500px;
+            margin-left: 50%;
+        }
+        .box{
+            border: solid 2px black;
+            position: relative;
+            
+            
+
+
+            display: block;
+            background-color: crimson;
+            height: 60px;
+            width: 100px;
+            
+        }
+    </style>
 </head>
 <body>
-    <span id="vue"> {{ message }}  </span>
-    <p class="produto"> O produto: {{ nome }}, Custa: {{ preco }}.</p>
+    <nav> 
+        <div class="horizontal-bar flex">
+            <span class="box">  </span>
 
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="debugger.js"></script>
+        </div> 
+        
+    </nav>
 </body>
 </html>

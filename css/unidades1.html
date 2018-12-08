@@ -5,13 +5,40 @@
     <meta charset="UTF-8">
     <title>Unidades #01</title>
     <style>
-        /* ... */
+        body{
+            font-size: 16px; /* valor padrão de fonts no chrome são 16px */
+        }
+        .unidades-absolutas {
+            position: absolute;
+
+            font-size: 40px;
+            padding: 20px;
+            border: solid 2px black;
+            margin: 30px;
+            width: 5cm; /* pouco usado */
+            height: 20mm; /* pouco usado */
+            top: 150px;
+            left: 200px;
+        }
+
+        .unidades-relativas {
+            position: absolute;
+
+            font-size: 4em; /* media que cresce multiplicado com o valor do elemento pai, ( 4 * o valor da font pai)  */
+            padding: 5%; /* medida que cresce ou diminui com base no valor viewPort/document */
+            border: solid 1vw black; /* medida que calcula ( innerWidth / 100 * NumeroDeVW ) */
+            margin: .8%; /* forma alternativa de representar 0.8% */
+            width: 20vw;
+            height: 15vh; /* medida que calcula ( innerHeigth / 100 * NumeroDeVW ) */
+            bottom: 5%;
+            right: 5%;
+        }
     </style>
 </head>
 
 <body>
-    <div class="unidades-absolutas">Opa!</div>
-    <div class="unidades-relativas">Epa!</div>
+    <div class="unidades-absolutas">Absoluto</div>
+    <div class="unidades-relativas">Relativo</div>
 </body>
 
 </html>

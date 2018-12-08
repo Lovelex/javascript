@@ -5,7 +5,73 @@
     <meta charset="UTF-8">
     <title>Position</title>
     <style>
-        /* ... */
+
+        div {
+            font-size: 25px;
+            padding: 2vw;
+            border: solid 4px black;
+        }
+
+        /* ------------------------------------------------------------------ */
+
+        .static { /* mantem-se fixa no lugar, valor padrão de elementos */
+            position: static;
+            background-color: cornflowerblue;
+        }
+
+        .absolute1 { /* Pode passar por cima de qualquer elemento e usar as propriedades top, right , etc */
+            background-color: chartreuse;
+            position: absolute;
+            top: 40px;
+            right: 40px;
+        }
+
+
+        .fixed { /* mantem-se fixa no lugar, independente da rolagem do browser */
+            position: -webkit-sticky; /* para funcionar em safary */
+            position: sticky; 
+            bottom: 30px;
+            right: 0;
+            background-color: tomato;
+        }
+
+        .relative1 { /* comporta como absolute podendo usar propriedades right, top, etc. Mas respeitando os elementos em volta */
+            position: relative;
+            left: 10px;
+            background-color: darksalmon;
+        }
+
+        .sticky { /* respeita os elementos, mas quando a rolagem do browser toca no elemento, passa a se comportar como fixed */
+            background-color: aqua;
+            position: sticky;
+            top: 10px;
+        }
+
+        /* Quando 2 elementos, pai com relative e filho com absolute. 
+        O elemento  pai comportasse como absolute e filho como relative.
+        Podendo assim mover o elemento filho com as propriedades right, left etc.
+        */
+        
+        .relative2 {
+            background-color: dimgrey;
+            position: relative;
+            width: 250px;
+            height: 300px;
+            left: 300px;
+            top: 2000px;
+            text-align: center
+        }
+
+        .absolute2 {
+            background-color:fuchsia;
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            bottom: 3px;
+            right: 3px;
+            font-size: 16px;
+        }
+
     </style>
 </head>
 
@@ -16,11 +82,12 @@
     <div class="absolute1">Absolute</div>
 
     <div class="relative2">
-        <div class="absolute2"></div>
+            Relative
+        <div class="absolute2">Absolute</div>
     </div>
 
     <div class="sticky">Sticky</div>
-    <p style="padding-bottom: 2000px;">Opa</p>
+    <p style="padding-bottom: 2000px;"></p>
 </body>
 
 </html>

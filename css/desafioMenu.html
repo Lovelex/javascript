@@ -7,7 +7,102 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
-        /* ... */
+        
+        * {
+            color: aliceblue;
+            font-family: 'Oswald';
+            text-decoration: none;
+            font-weight: 500;
+            text-shadow: 1px 1px 1px black;
+            margin: 0;
+        }
+
+        .cabecalho {
+            position: relative;
+            padding: 10px;
+            background-color: #222
+            
+        }
+      
+        div.logo {
+            display: inline;
+        }
+
+        .menu {
+            position: absolute;
+            top: 33%;
+            display: inline;
+        }
+
+        ul {
+            display: inherit;
+            
+        }
+
+        li {
+            text-align: center;
+            display: inline-block;
+        }
+
+        li > a {
+            padding: 10px;
+        }
+
+        li > a:hover {
+            color: #222;
+            background-color: rgb(127, 214, 255);
+        }
+
+        a img {
+            width: 230px;
+        }
+
+        .autenticacao {
+            position: absolute;
+            top: 34%;
+            right: 2%;
+        }
+
+        .botao {
+            margin-left: 10px;
+            padding: 7px 15px;
+            border: solid 1px rgb(255, 65, 65);
+            border-radius: 50px;
+        }
+
+        .destaque {
+            background-color:rgb(255, 65, 65);
+        }
+
+        .menu-toggle {
+            margin-top: 5px;
+            display: none;
+            padding: 7px 18px;
+            background-color: rgb(95, 95, 95);
+            border: solid 1px rgb(95, 95, 95);
+            border-radius: 5px;
+            float: right;
+        }
+
+        .blue-line {
+            background-color: rgba(68, 196, 255, 0.87);
+            height: 3px;
+        }
+
+        .selected {
+            background-color: rgb(127, 214, 255);
+            color: aliceblue;
+        }
+
+        @media ( max-width:700px ) {
+            .autenticacao { display: none }
+        }
+
+        @media ( max-width:560px ) {
+            .menu { display: none }
+            .menu-toggle { display: block }
+        }
+
     </style>
 </head>
 
@@ -42,9 +137,28 @@
             <a href="#registar" class="botao destaque">Registrar</a>
         </aside>
     </header>
-
+    <div class="blue-line"></div>
     <script>
-        // ...
+
+        // const hash = window.location.hash
+        // const url = window.location.href
+        
+        const actualUrl = window.location.href.split('#')[1]
+        const actualMenu = document.querySelector( `li > a[href="#${actualUrl}"` )
+        actualMenu && actualMenu.classList.add('selected')
+
+        window.onhashchange = function (e) {
+            const oldUrl = e.oldURL.split( '#' )[1]
+            const newUrl = e.newURL.split( '#' )[1]
+            
+            const newMenu = document.querySelector( `li > a[href="#${newUrl}"]` )
+            const oldMenu = document.querySelector( `li > a[href="#${oldUrl}"]` )
+            
+            newMenu && newMenu.classList.add('selected')
+            oldMenu && oldMenu.classList.remove('selected')
+            
+        }
+        
     </script>
 </body>
 

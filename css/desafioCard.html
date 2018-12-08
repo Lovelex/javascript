@@ -5,7 +5,58 @@
     <meta charset="UTF-8">
     <title>Desafio Card</title>
     <style>
-        /* ... */
+        
+        .curso {
+            display: inline-block;
+            vertical-align: top;
+            font-family: Verdana;
+            padding: 5px;
+            margin: 5px 15px 15px 20px;
+            width: 260px;
+            height: 300px;
+            border: solid 1px #ccc;
+            box-shadow: 0 0 15px rgba(0, 0, 0 , 0.4)
+        }
+
+        .curso img {
+            width: 100%;
+            max-height: 50%;
+        }
+
+        .curso-info {
+            padding: 10px;
+            height: 90px;
+            overflow: hidden;
+        }
+
+        .curso-info > h4 {
+            font-weight: 100;
+            font-size: 1.4em;
+            margin: 0;
+        }
+        
+        .curso-preco {
+            padding: 10px;
+            float: right;
+            vertical-align: bottom;
+        }
+
+        .preco-de, .preco-por {
+            font-weight: bold;
+        }
+
+        .preco-de {
+            text-decoration: line-through;
+            color: firebrick;
+            font-size: 0.8em;
+
+        }
+
+        .preco-por{
+            color: darkgreen;
+            font-size: 1.4em;
+        }
+
     </style>
 </head>
 
@@ -16,11 +67,14 @@
     <img src="http://files.cod3r.com.br/curso-web/card.png" height="340" alt="Objetivo">
 
     <h2>Resultado</h2>
+
+    <!-- Card 1 -->
+
     <div>
         <div class="curso">
             <img src="http://files.cod3r.com.br/curso-web/curso1.jpg" />
             <div class="curso-info">
-                <h4>Docker: Ferramenta essencial para Desenvolvedores</h4>
+                <h4>Docker: Ferramenta essencial para Desenvolvedores </h4>
                 <p>Prof. Fulano</p>
             </div>
             <div class="curso-preco">
@@ -28,6 +82,9 @@
                 <span class="preco-por">R$50,00</span>
             </div>
         </div>
+
+        <!-- Card 2 -->
+
         <div class="curso">
             <img src="http://files.cod3r.com.br/curso-web/curso2.jpg" />
             <div class="curso-info">

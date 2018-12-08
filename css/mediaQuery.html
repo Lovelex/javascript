@@ -12,6 +12,23 @@
             border: solid 5px;
             display: none;
         }
+
+        @media ( max-width:500px ) {
+            .muito-pequeno { display: block } /* quando a largura da página for 500px ou menor, display se torna block */
+        }
+
+        @media ( max-width:500px ), ( max-height:500px ) { /* vírgula tem o comportamento de OR. quando width OU height forem 500px, display = block */
+            .muito-pequeno { display: block }
+        }
+
+        @media ( max-width:500px ) , ( orientation: portrait ) { /* orientation: portrait - Modo retrato. orientation: landscape - modo paisagem  */
+            .pequeno-retrato { display: block }
+        }
+
+        @media ( min-width:900px ) and ( max-width:1000px ) { /* quando min width ser 900px E max width ser 1000px, display = block */ 
+            .intervalo { display: block }
+        }
+
     </style>
 </head>
 <body>
