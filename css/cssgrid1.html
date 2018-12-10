@@ -7,8 +7,7 @@
     <style>
         /* https://caniuse.com/#feat=css-grid */
         
-        html,
-        body {
+        html, body {
             margin: 20px;
             height: calc(100% - 40px);
             background-color: lightgray;
@@ -22,10 +21,20 @@
             border: solid 5px dodgerblue;
             background: #fff;
         }
+
+        .css-grid {
+          display:grid;
+          grid-template-columns: 33.33% 33.33% 33.33%;
+         
+        }
+
+        
+        
+
     </style>
 </head>
 
-<body>
+<body class="css-grid">
     <div class="d1">1</div>
     <div class="d2">2</div>
     <div class="d3">3</div>

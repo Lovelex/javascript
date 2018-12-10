@@ -4,14 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Desafio Menu</title>
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
     <style>
         body {
             margin: 0;
-            font-family: 'Oswald', sans-serif;
+            font-family: 'Rubik', sans-serif;
             background-color: lightgray;
         }
         
+        .flex {
+            display: flex;
+        }
+
+        .flex-position{
+            justify-content: space-between;
+            align-items: center; 
+        }
+
         .cabecalho {
             background: #333;
             color: #fff;
@@ -23,6 +32,10 @@
             height: 50px;
         }
         
+        .menu {
+            flex-grow: 1;
+        }
+
         .menu ul {
             list-style: none;
             margin: 0;
@@ -32,7 +45,7 @@
         .cabecalho a {
             text-decoration: none;
             color: #eee;
-            font-size: 1.3em;
+            font-size: 1.2em;
             padding: 10px 15px;
         }
         
@@ -58,14 +71,14 @@
 </head>
 
 <body>
-    <header class="cabecalho">
+    <header class="cabecalho flex flex-position">
         <div class="logo">
             <a href="#inicio">
                 <img src="http://files.cod3r.com.br/curso-web/logo.png" alt="Logo" />
             </a>
         </div>
         <nav class="menu">
-            <ul>
+            <ul class="flex">
                 <li>
                     <a href="#inicio">Início</a>
                 </li>

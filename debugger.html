@@ -1,48 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Debugger</title>
-    <style>
-        * {
-            margin: 0;
-        }
-        
-        .flex{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Title</title>
+  <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+  <style>
+    
+    header { grid-area: header; }
+    main { grid-area: main; }
+    aside { grid-area: aside; }
+    menu { grid-area: menu; }
+    footer { grid-area: footer; }
 
-        .horizontal-bar{
-            background-color: black;
-            height: 500px;
-            margin-left: 50%;
-        }
-        .box{
-            border: solid 2px black;
-            position: relative;
-            
-            
+    html, body {
+      height: 100%;
+      margin: 0 60px;
+    }
+    
+    menu { margin: 0; padding: 0; }
 
+    .grid-container {
+      display: grid;
+      grid-template-rows: 50px 1fr 15%;
+      grid-template-areas:
+        'header header header header header header'
+        'menu main main main main aside'
+        'footer footer footer footer footer footer';
+      grid-gap: 2px;
+      
+    }
+    
+    .grid-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: solid 2px brown;
+      background-color: aquamarine;
+    }
 
-            display: block;
-            background-color: crimson;
-            height: 60px;
-            width: 100px;
-            
-        }
-    </style>
+  </style>
 </head>
-<body>
-    <nav> 
-        <div class="horizontal-bar flex">
-            <span class="box">  </span>
 
-        </div> 
-        
-    </nav>
+<body class="grid-container">
+  <header class="grid-item">Header</header>
+  <main class="grid-item">Main</main>
+  <aside class="grid-item">Aside</aside>
+  <menu class="grid-item">Menu</menu>
+  <footer class="grid-item">Footer</footer>
 </body>
 </html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #01</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="conteudo exercicio">
+    <div id="primeiro">#primeiro</div>
+    <div>Segundo</div>
+    <div class="terceiro ultimo">.terceiro .ultimo</div>
+    <script>              
+        const idPrimeiro = document.getElementById('primeiro')
+        idPrimeiro.classList.add('destaque')
+
+        const divs = document.getElementsByTagName('div')
+        Array.from(divs).forEach( div => div.classList.remove('destaque') ) 
+
+        const ultimo = document.getElementsByClassName('ultimo')
+        const ultimoArr = [...ultimo]
+        ultimoArr.forEach( ultimo => ultimo.classList.add('destaque') )
+
+        /* Array.from() e [...] podem ser usados para transformar os elementos em Array */
+
+    </script>
+</body>
+</html>
