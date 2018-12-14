@@ -4,13 +4,26 @@
     <meta charset="UTF-8">
     <title>Selecionar Elementos #02</title>
     <link rel="stylesheet" href="css/estilo.css">
+    <style>
+      
+    </style>
+    
 </head>
 <body class="conteudo exercicio">
-    <div id="primeiro">#primeiro</div>
-    <div>Segundo</div>
-    <div class="terceiro ultimo"><span wb-attrib>.terceiro .ultimo</span></div>
-    <script>              
-        // ...
-    </script>
+  <div id="primeiro">#primeiro</div>
+  <div>Segundo</div>
+  <div class="terceiro ultimo">
+    <span wb-attrib>
+      .terceiro .ultimo
+    </span>
+  </div>
+  <script>              
+    const addClass = (element) => { document.querySelectorAll(element).forEach( (e) => e.classList.add('destaque')) }  
+    const removeClass = (element) => { document.querySelectorAll(element).forEach( (e) => e.classList.remove('destaque')) } 
+    addClass('div')
+    removeClass('*')
+    
+
+  </script>
 </body>
 </html>

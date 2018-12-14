@@ -1,53 +1,36 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Title</title>
-  <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
-  <style>
-    
-    header { grid-area: header; }
-    main { grid-area: main; }
-    aside { grid-area: aside; }
-    menu { grid-area: menu; }
-    footer { grid-area: footer; }
+<div class="css-grid">
 
-    html, body {
-      height: 100%;
-      margin: 0 60px;
-    }
-    
-    menu { margin: 0; padding: 0; }
+  <div class="item1"></div>
+  <div class="item2"></div>
+  <div class="item3"></div>
+  <div class="item4"></div>
+</div>
 
-    .grid-container {
-      display: grid;
-      grid-template-rows: 50px 1fr 15%;
-      grid-template-areas:
-        'header header header header header header'
-        'menu main main main main aside'
-        'footer footer footer footer footer footer';
-      grid-gap: 2px;
-      
-    }
-    
-    .grid-item {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: solid 2px brown;
-      background-color: aquamarine;
-    }
+<style>
 
-  </style>
-</head>
+  .item1 { grid-area: nav; }
+  .item2 { grid-area: menu; }
+  .item3 { grid-area: content; }
+  .item3 
 
-<body class="grid-container">
-  <header class="grid-item">Header</header>
-  <main class="grid-item">Main</main>
-  <aside class="grid-item">Aside</aside>
-  <menu class="grid-item">Menu</menu>
-  <footer class="grid-item">Footer</footer>
-</body>
-</html>
+  html, body {
+    height: 100%;
+  }
+
+  .css-grid {
+    display: grid;
+    grid-template-columns: 50px 600px;
+  }
+
+  .css-grid {
+    grid-template-areas: 
+    'nav nav nav nav nav'
+    'menu menu content content content';
+
+  }
+
+  .css-grid div {
+    border: solid 2px black;
+    background-color: cyan;
+  }
+</style>

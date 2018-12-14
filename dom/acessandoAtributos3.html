@@ -16,7 +16,14 @@
         </ul>
     </div>
     <script>
-        // ...
+        const lista = document.querySelector('#compras')
+        
+        // Somente leituro 
+        console.log(lista.attributes) // retorna os atributos do elemento
+        console.log(lista.attributes[0]) // acessa o primeiro atributo do elemento capturado
+        console.log(lista.attributes.destino) // acessa o atributo destino do elemento
+        console.log(lista.attributes.id) // traz o id do elemento capturado 
+        console.log(lista.attributes['data-urgencia']) // acessa o atributo data-urgencia
     </script>
 </body>
 

@@ -12,7 +12,11 @@
         Classes
     </div>
     <script>
-        // ...
+        const div = document.querySelector('div')
+        const classes = div.classList
+        classes.add('destaque')
+        classes.remove('destaque')
+        classes.toggle('destaque') // adiciona classe destaque se não existir, retira classe destaque se existir
     </script>
 </body>
 
