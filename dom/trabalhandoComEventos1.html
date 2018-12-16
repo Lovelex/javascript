@@ -7,11 +7,30 @@
     <link rel='stylesheet' href='css/estilo.css'>
 </head>
 
-<body class="conteudo exercicio">
+<body  class="conteudo exercicio">
     <div>
-        <a href="https://google.com.br">Google</a>
+        <a trocar-em-segundos href="https://google.com.br" >Google</a>
     </div>
+    
+
     <script>
-        // ...
+        const wait5Seconds = (e) => {
+          e.preventDefault()
+          setTimeout( () => {
+            window.location.href = e.target.href
+          },5000 )
+        }
+
+        const a = document.querySelector('a')
+        a.onclick = wait5Seconds
+
+        const trocarEmSegundos = document.querySelector('[trocar-em-segundos]')
+        trocarEmSegundos.onclick = wait5Seconds
+
+        /* 
+         * onclick direto no atributo do elemento é mais didático porem menos flexivel
+         * onclick com query selector é menos didático porem mais flexivel
+        */
+
     </script>
 </body>

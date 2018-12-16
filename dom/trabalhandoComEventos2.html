@@ -10,6 +10,16 @@
 <body class="conteudo exercicio">
     <div>Elemento</div>
     <script>
-        // ...
+        const div = document.querySelector('div')
+        div.style.position = 'absolute'
+        
+        div.onmousemove = (e) => {
+          div.style.cursor = 'move'
+          if(e.buttons){
+            const caixa = e.target
+            caixa.style.top = e.clientY - ( caixa.clientHeight / 2 ) + 'px' /* clientY e X fazem o posicionamento da div, a matematica usada é so pra posicionar o cursor no centro da div */
+            caixa.style.left = e.clientX - ( caixa.clientWidth / 2 ) + 'px'
+          }
+        }
     </script>
 </body>

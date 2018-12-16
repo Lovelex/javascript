@@ -12,7 +12,14 @@
         <p>Texto Inicial</p>
     </div>
     <script>
-        // ...
+      const div = document.querySelector('div')
+      div.innerHTML = 'Texto' /* exclui os filhos e altera para um texto */
+      // div.outerHTML = 'Texto' /* exclui o proprio elemento e filhos, alterando para um texto */
+      div.insertAdjacentHTML('beforebegin', '<p>Antes do início</p>')
+      div.insertAdjacentHTML('afterbegin', '<p>Depois do começo</p>')
+      div.insertAdjacentHTML('beforeend', '<p>Antes do fim</p>')
+      div.insertAdjacentHTML('afterend', '<p>Depois do fim</p>')
+      console.log(div.innerText) /* mostra os textos no elemento */
     </script>
 </body>
 
