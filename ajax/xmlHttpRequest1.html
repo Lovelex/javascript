@@ -11,6 +11,57 @@
     <h1>Estados</h1>
 
     <script>
-        // ...
+      function ajax(config){ // parâmetro que recebe um objeto
+        const xhr = new XMLHttpRequest() // objeto para requisições ajax
+        xhr.open(config.metodo, config.url, true) // 3º parâmetros: qual tipo de envio (post, get, etc), qual url a consumir, asyncrona ou não.
+
+        xhr.onload = e => {
+          if (xhr.status === 200) { 
+            config.sucesso(xhr.response)
+          } else if (xhr.status >= 400) {
+            config.erro({
+              codigo: xhr.status, // número do status da requisição
+              texto: xhr.statusText // mensagem do erro
+            })
+          }
+        }
+
+        xhr.send() // envia a requisição ajax
+      }
+
+      ajax({
+        url:"dados/estados.json",
+        metodo: "get",
+        sucesso(resposta) {
+          const estados = JSON.parse(resposta)
+
+          const linhas = estados.map(estado => {
+            const tdId = document.createElement('td')
+            tdId.innerHTML = estado.id
+
+            const tdNome = document.createElement('td')
+            tdNome.innerHTML = estado.nome
+
+            const tdSigla = document.createElement('td')
+            tdSigla.innerHTML = estado.sigla
+
+            const tr = document.createElement('tr')
+            
+            tr.appendChild(tdId)
+            tr.appendChild(tdNome)
+            tr.appendChild(tdSigla)
+
+            return tr
+          })
+
+          const table = document.createElement('table')
+          linhas.forEach( linha => { table.appendChild(linha) } )
+          document.body.appendChild(table)
+        },
+        erro(e) {
+          const msg = document.createTextNode(`${e.codigo}: ${e.texto}`)
+          document.body.appendChild(msg)
+        }
+      })
     </script>
 </body>
