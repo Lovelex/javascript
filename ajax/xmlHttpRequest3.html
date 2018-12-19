@@ -11,6 +11,45 @@
     <h1>Estados</h1>
 
     <script>
-        // ...
+        function ajax(config) {
+          const xhr = new XMLHttpRequest()
+          const igualDuzentos = () => xhr.status === 200
+          const maiorQueQuatrocentos = () => xhr.status > 399
+
+          xhr.open(config.metodo, config.url, true)
+
+          xhr.onreadystatechange = (e) => { // quando o status da requisição mudar faça uma ação.
+            if(xhr.readyState === 4) { // quando o status da requisição for 4 significa que está tudo certo
+              if (igualDuzentos()) {
+                config.sucesso(xhr.responseXML)
+              } else if (maiorQueQuatrocentos()) {
+                config.erro({
+                  codigo: xhr.status,
+                  texto: xhr.statusText
+                })
+              }
+            }
+          }
+
+          xhr.send()
+        }
+        ajax({
+          url: 'dados/estados.xml',
+          metodo: 'get',
+          sucesso(resposta) {
+            const estados = resposta.getElementsByTagName('estado')
+            console.log(estados)
+            const itens = Array.from(estados).reduce(
+              (html, estado) => html + `<li>${estado.attributes.nome.value}</li>`, ''
+            )
+            console.log(itens)
+            document.body.insertAdjacentHTML('beforeend', `<ul>${itens}</ul>`)
+            console.log(itens)
+          },
+          erro(e) {
+            const msg = document.createTextNode(`${e.codigo}: ${e.texto}`)
+            document.body.appendChild(msg)
+          }
+        })
     </script>
 </body>
