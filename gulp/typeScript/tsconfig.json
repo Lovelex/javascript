@@ -1,10 +1,10 @@
 {
-    "files": [
+    "files": [ // onde estão os arquivos a serem traduzidos
         "src/**/*.ts"
     ],
     "compilerOptions": {
-        "rootDir": "src",
+        "rootDir": "src", // qual a pasta que contém os arquivos
         "noImplicitAny": true,
-        "target": "es5"
+        "target": "es5" // qual a liguajem a traduzir
     }
 }
