@@ -14,6 +14,16 @@
     <div>2</div>
 
     <script>
-        // ...
+      $('body').hide(1).show(2000)// retorna todos elementos div's
+      console.log( $('div').get(0) ) // retorna o primeiro elemento div
+      console.log($.isEmptyObject({})) // retorna true
+      console.log(jQuery.inArray(3, [1, 2, 3])) // retorna o indice de 3 caso ele exista. jQuery é a segunda forma de referênciar a biblioteca
+
+      $.fn.fundoVerde = function () {
+        this.css('background-color', 'green') // função que cria uma propriedade CSS
+        return this
+        // this referência ao objeto que a função SERÁ 
+      }
+      $('body').fundoVerde().fadeOut(2000)
     </script>
 </body>

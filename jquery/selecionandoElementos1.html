@@ -49,6 +49,26 @@
     </form>
 
     <script>
-        // ...
+        // Seletores padrões do CSS
+        $('#feira').addClass('destaque')
+        $('li').addClass('destaque')
+        $('[wm-obrigatorio]').removeClass('destaque')
+        $('li.opcional').removeClass('destaque')
+        $('div p span').addClass('destaque')
+
+        // Seletores do jQuery
+        $('li:first').css('border', 'solid 3px yellow') // seleciona o primeiro li
+        $('li:odd').css('border', 'solid 10px orange') // seleciona os impares (começa a contagem a partir de 0)
+        $('li:gt(1)').css('border', 'solid 10px white') // seleciona todos os elementos a partir do segundo elemento pois começa em 0
+        $('li:not(:last)').css('border', 'none') // seleciona todos os li MENOS o último
+        $('li:contains("r")').css('background-color', 'black') // seleciona todos os li que contem a letra r
+
+        // Seletores do jQuery com form
+        $('form *').hide() // seleciona todos os elementos em form e esconde
+        $('form :text').show() // seleciona no formulario o input do tipo text
+        $('form :password').show() // seleciona no formulario o input do tipo password
+        $('form :checkbox').show() // seleciona no formulario o input do tipo checkbox
+        $('form :radio').show() // seleciona no formulario o input do tipo radio
+        $('form :file').show() // seleciona no formulario o input do tipo file
     </script>
 </body>

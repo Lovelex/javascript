@@ -13,8 +13,31 @@
     <div id='conteudo1'></div>
     <div id='conteudo2'></div>
     <div id='conteudo3'></div>
+    <div>Sem Id</div>
 
     <script>
-        // ...
+        // Conteúdo 1
+        $('#conteudo1').append('<p>1</p>') // Cria um P na última posição em #conteudo
+
+        // Conteúdo 2
+        const elementos = [
+          $('<li></li>').append('Arroz'), 
+          $('<li>').append('Feijão'), // $('<li>') é só uma forma reduzida de $('<li></li>')
+          $('<li>').append('Carne')
+          /* $('<li>') cria uma li e com append() ja adiciona na li criada */
+        ]
+
+        const lista = $('<ul><li>Sorvete</li></ul>').append(elementos) // Cria uma ul ja adicionando uma li e tbm o array elementos
+        $('#conteudo2').append(lista)
+
+        // Conteúdo 3
+        $('#conteudo3')
+          .append('<h2>2</h2>', '<h2>3</h2>') // append de 2 elementos com Vírgula
+          .append(['<h2>4</h2>', '<h2>5</h2>']) // append de 2 elementos com Array
+          .prepend('<h2>1</h2>').prepend('<h2>0</h2>') // prepend adiciona o elemento no ínicio do elemento selecionado
+          .html('<h2> 0 1 2 3 4 5 </h2>') // subistitui todo o conteudo dentro do elemento selecionado pelo conteudo passado (versão reduzida de innerHTML do js)
+          .text('<h2>12345</h2>') // interpreta estritamente como um texto, resultado: <h2>12345</h2>
+        $('div[id]').html('<h1>Todos!</h1>') // seleciona todos as div's que possuem id
+        
     </script>
 </body>

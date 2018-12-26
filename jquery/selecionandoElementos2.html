@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt_BR">
 
 <head>
     <meta charset='UTF-8'>
@@ -81,6 +81,21 @@
         <p>Cod3r Ensino</p>
     </footer>
     <script>
-        // ...
+        const comBorda = { 'border': 'solid 8px orange' }
+        const semBorda = { 'border': 'none' }
+        $('a[href="#link3"]').parent().css(comBorda).css(semBorda) // parent() seleciona o elemento pai
+        $('li:last').prev().css(comBorda).css(semBorda)// prev() seleciona o elemento anterior ao passado como parâmetro
+        $('a[href="#link3"]').parent().next().css(comBorda).css(semBorda) // next() seleciona o proximo elemento referente ao capiturado por parâmetro
+        $('a[href="#link1"]').parents().css(comBorda).css(semBorda) // parents() seleciona TODOS os parentes acima da sua linhagem 
+        $('a[href="#link1"]').parentsUntil($('body')).css(comBorda).css(semBorda) // parentsUntil() seleciona TODOS os parentes acima da sua linhagem ATÉ um certo ponto
+        $('main').children().css(comBorda).css(semBorda) // Seleciona todos os elementos filhos do elemento capiturado (Não procura em filhos de filhos)
+        $('body').find('p').css(comBorda).css(semBorda) // Seleciona todas as tags p dentro de body (Procura em filhos de filhos)
+
+        const elementoDOM = document.getElementsByClassName('menu')
+        $(elementoDOM).css(comBorda) // Elementos capiturado com js nativo podem ser convertido e usado com jquery
+
+        $('main').children().each( (index, elemento) => $(elemento).css(comBorda) )
+        $('li').each( (i, e) => $(e).css(comBorda) )
+        /* each() é o forEach do jQuery, o elemento é a DOM original então é preciso passar o retorno como $() para ser convertido para o jQuery */
     </script>
 </body>
