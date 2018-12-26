@@ -73,6 +73,9 @@ li {
     background-color: salmon;
 }
 
+.exercicio div:nth-of-type(7) {
+  background-color: lightgreen;
+}
 .exercicio .destaque {
     border: solid 10px greenyellow;
     color: greenyellow;

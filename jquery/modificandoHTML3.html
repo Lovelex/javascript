@@ -13,13 +13,19 @@
     <div id='conteudo'></div>
 
     <script>
+      $(function(){ // faz com que aguarde a DOM ser carregada para depois carregar o script, e reduz o escopo impedindo alcançar o global
         const pessoas = [
-            { nome: 'Ana', nota: 9.1 },
-            { nome: 'Bianca', nota: 8.4 },
-            { nome: 'Carlos', nota: 7.6 },
-            { nome: 'Julia', nota: 9.7 }
+              { nome: 'Ana', nota: 9.1 },
+              { nome: 'Bianca', nota: 8.4 },
+              { nome: 'Carlos', nota: 7.6 },
+              { nome: 'Julia', nota: 9.7 }
         ]
+        const table = $('<table>')
+        pessoas.forEach((pessoa, index) => {
+          return $(table).append(`<tr><td>${pessoa.nome}</td><td>${pessoa.nota}</td></tr>`)
+        })
         
-        // ...
+        $('#conteudo').append(table)
+    })
     </script>
 </body>

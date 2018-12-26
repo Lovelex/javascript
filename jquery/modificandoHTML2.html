@@ -15,8 +15,31 @@
     <div id='div3'>3</div>
     <p class='numero'>4</p>
     <p class='numero'>5</p>
+    <p class='numero2'>6</p>
+    <p class='numero2'>7</p>
 
     <script>
-        // ...
+        $('#div1').append(', 2')
+        $('#div1').prepend('0, ')
+
+        $('<span>, 3</span>').appendTo('#div1') // inverte a lógica de append(), primeiro passamos o elemento e depois o seletor
+        $('<span>-1, </span>').prependTo('#div1') // inverte a lógica de prepend(), primeiro passamos o elemento e depois o seletor
+        /* No caso de appendTo e prependTo temos que passar uma tag, caso não passamos nada o jQuery intenderá que estamos SELECIONANDO algo */
+
+        $('#div2').before('<p>Antes Before</p>') // adiciona um elemento FORA do selecionado em uma posição anterior
+        $('#div2').after('<p>Depois Before</p>') // adiciona um elemento FORA do selecionado em uma posição sucessor
+
+        $('<p>Antes InsertBefore</p>').insertBefore('#div3') // inverte a lógica de before(), primeiro passamos o elemento e depois o seletor
+        $('<p>Depois InsertAfter</p>').insertAfter('#div3') // inverte a lógica de after(), primeiro passamos o elemento e depois o seletor
+        /* No caso de insertBefore e insertAfter temos que passar uma tag, caso não passamos nada o jQuery intenderá que estamos SELECIONANDO algo */
+
+        $('p.numero').wrap('<div class="div4">') // cria uma div para cada elemento p.numero encontrado e cria class para eles
+        $('p.numero2').wrapAll('<div id="div5">') // envolve TODOS p.numero2 em uma div criada com id #div5
+        $('.div4').empty() // remove todos os FILHOS de .div4
+        $('#div5').remove() // remove o elemento PAI junto com os FILHOS de #div5
+
+        $('body > p').replaceWith('<div>Substituto</div>') // Substitui todos os P dentro de body por uma Div com texto substituto
+        $('<div>Substituto</div>').replaceAll('body > p') // Inverte a lógica de replaceWith, primeiro passamos o elemento e depois o seletor
+
     </script>
 </body>
