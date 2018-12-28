@@ -16,10 +16,43 @@
 <body class='conteudo exercicio'>
     <h1>Eventos #01</h1>
     <div id='posicao'></div>
-    <div id='cliques'>Cliques: 0</div>
+    <div id='cliques'>Cliques: 0 </div>
     <input type="text" placeholder="Cor de Background">
 
     <script>
-        // ...
+        const setarPosicao = (e) => {
+          $('#posicao').html(`pos X: ${e.clientX} pos Y: ${e.clientY}`)
+        }
+        $('body').mousemove(setarPosicao)
+        // Não devemos invocar a função setarPosicao, pois ela é invocada automaticamente quando movemos o mouse por causa de 'mousemove'
+
+        $('#posicao').mouseover((e) => { $('body').off('mousemove', setarPosicao) })
+        // quando cursor passar em cima de #posicao desliga a funcao mousemove em body
+        $('#posicao').mouseleave((e) => { $('body').mousemove(setarPosicao) })
+        // quando o cursor sair de #posicao inicie a função mouse move
+
+        let i = 0;
+        $('body').on('click', () => {
+          $('#cliques').html(`Cliques: ${++i}`)
+        })
+
+        const backgroundOriginal = $('body').css('background-color')
+
+        $('input').keyup(function (e) {
+          const valor = $(this).val()
+          // this referece ao input associado por causa de function()
+          // val() retorna o valor/texto digitado
+          if (valor.match(/#[\da-fA-F]{3,6}/)){
+          // match() verifica se o texto digitado bate com a expressão retornando true ou false
+          // # (começa com '#'), [\d] pode conter numeros de 0-9, 
+          // [a-f] pode conter letras de a-f Minúsculas
+          // [A-F] pode conter letras de A-F Maiúsculas
+          // {3,6} a quantidade de caractéres depois de '#' devem ser de 3 a 6 
+            $('body').css('background-color', valor)
+          } else {
+            $('body').css('background-color', backgroundOriginal)
+          }
+        })
+        // registra a palavra inserida no input
     </script>
 </body>

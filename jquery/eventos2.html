@@ -21,6 +21,31 @@
     <input type="text" placeholder="Digite e Selecione">
     <div id="resultado2">?</div>
     <script>
-        // ...
+        const alternarDestaque = () => $('#div1').toggleClass('destaque')
+        $('#div1').hover(alternarDestaque, alternarDestaque)
+        // podemos definir mais funções nos eventos
+        // hover() ativa quando o cursor passar em cima do elemento selecionado 
+
+        $('#div1').one('mouseenter', e => alert('Apenas uma vez'))
+        // one() faz com que o evento aconteça somente uma vez
+        // mouseenter ativa quando o cursor passar no elemento selecionado
+        
+        $('#div1').dblclick(function(e) { $(this).fadeOut(1000).fadeIn(1000) })
+        // dbclick() ativa quando um duplo click no elemento selecionado é disparado. 'Double Click'
+        
+        $(window).resize(function(e) {
+          // resise() ativa quando a altura ou largura da janela são alterados
+          const width = $(window).width()
+          const height = $(window).height()
+          // window seleciona o objeto window
+          $('#resultado1').html(`Largura: ${width} Altura: ${height}`)
+        })
+
+        $(':input').select(e => {
+          const inicio = e.target.selectionStart
+          const fim = e.target.selectionEnd
+          $('#resultado2').html(e.target.value.substring(inicio, fim))
+          // select() ativa quando selecionamos um texto ou parte dele
+        })
     </script>
 </body>
