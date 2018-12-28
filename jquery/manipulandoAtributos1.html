@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Manipulando Atributos</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <script src='js/jquery.js'></script>
+    <style>
+        [wm-relogio] {
+            text-align: center;
+        }
+
+        button {
+            font-size: 1.6em;
+            padding: 0px 25px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body class='conteudo exercicio'>
+    <h1>Manipulando Atributos</h1>
+    <div wm-relogio='1000'>Atributo HTML5</div>
+    <div class="relogio">Class</div>
+    <div id="relogio">Id</div>
+
+    <script>
+        // attr() retorna o valor do atributo do elemento caso UM parâmetro seja passado, undefined é retornado caso não encontre
+        const attrUmParametroPersonalizado = $('[wm-relogio]').attr('wm-relogio')
+        const attrUmParametroClass = $('.relogio').attr('class')
+        const attrUmParametroId = $('#relogio').attr('id')
+
+        console.log(attrUmParametroPersonalizado) 
+        console.log(attrUmParametroClass) 
+        console.log(attrUmParametroId ) 
+
+        // attr() altera o valor do atributo cado dois parâmetros sejam passados. 1º: qual atributo. 2º qual o valor novo.
+        const attrDoisParametrosPersonalizado = $('[wm-relogio]').attr('wm-relogio', 'Anel')
+        const attrDoisParametrosCLass = $('.relogio').attr('class', 'Chave')
+        const attrDoisParametrosId = $('#relogio').attr('id', 'Cadeado')
+
+        console.log(attrDoisParametrosPersonalizado.attr('wm-relogio'))
+        console.log(attrDoisParametrosCLass.attr('class'))
+        console.log(attrDoisParametrosId.attr('id'))
+
+        // attr() adiciona atributos se passado por parâmetro um OBJETO
+        let attrComObjeto = $('[wm-relogio]').attr({ class:'nova-classe', perso: 'novo-personalizado', id:'novo-id' })
+
+        console.log(attrComObjeto.attr('class'))
+        console.log(attrComObjeto.attr('id'))
+        console.log(attrComObjeto.attr('perso'))
+
+        // removendo atributos
+        attrComObjeto.removeAttr('class')
+
+        console.log(attrComObjeto.attr('class'))
+    </script>
+</body>

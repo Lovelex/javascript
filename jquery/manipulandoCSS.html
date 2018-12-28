@@ -15,6 +15,29 @@
     <div id='div3'>3</div>
     <div id='resultado'></div>
     <script>
-        // ...
+        // Quando css() com 1 parâmetro é chamado, ele traz o valor css do elemento chamado
+        const fonte = $('#div1').css('font-family')
+        $('#resultado').append(`Fonte é ${fonte}`)
+
+        // Quando css é passado 2 parâmetros, o primeiro é o chave css o segundo é o valor css
+        $('#div1').css('font-size', '3em')
+        
+        // Quando o css é passado um objeto como parâmetro, sua chave é a chave css e valor é o valor css. Podendo assim passar valios atributos css.
+        $('#div3').css({ 'font-size': '3.5em', 'color': 'yellow' })
+
+        // Podemos passar como segundo parâmetro uma função para executar operações mais específicas
+        $('#div3').css('font-size', () => `${2 * 3}em`  )
+
+        $('#div2').addClass('destaque')
+        // retorna true ou false
+        const temClasse = $('#div2').hasClass('destaque')
+        $('#resultado').append(`<br>Tem a classe destaque? ${temClasse}`)
+        $('#div2').removeClass('destaque')
+
+        // Se o elemento possuir a classe .destaque remove, se não possuir acrescenta
+        $('#div3').toggleClass('destaque')
+        $('#div3').toggleClass('destaque')
+        $('#div3').toggleClass('destaque')
+
     </script>
 </body>
