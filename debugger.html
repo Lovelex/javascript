@@ -1,15 +1,571 @@
-
-<div>Div</div>
-<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous">
-</script>
-<script>
-  function cois(eleme) {
-    const $eleme = $(eleme) 
-    return $eleme
-  }
-
-  console.log( cois('div'))
-</script>
+<html hola_ext_inject="disabled"><head></head><body screen_capture_injected="true" cz-shortcut-listen="true"><center>
+ 
+ 
+ 
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript">
+    function EloEvolution(attrs) {
+      var image_path = 'http://elodash.com/wp-content/uploads/2016/01/';
+      this._products = {
+        b5: {
+          id: 2854,
+          price: 0,
+          image: image_path + 'bronze_5.png'
+        },
+        b4: {
+          id: 2854,
+          price: 20,
+          image: image_path + 'bronze_4.png'
+        },
+        b3: {
+          id: 2854,
+          price: 20,
+          image: image_path + 'bronze_3.png'
+        },
+        b2: {
+          id: 2854,
+          price: 20,
+          image: image_path + 'bronze_2.png'
+        },
+        b1: {
+          id: 2854,
+          price: 20,
+          image: image_path + 'bronze_1.png'
+        },
+        s5: {
+          id: 2855,
+          price: 22,
+          image: image_path + 'silver_5.png'
+        },
+        s4: {
+          id: 2855,
+          price: 22,
+          image: image_path + 'silver_4.png'
+        },
+        s3: {
+          id: 2855,
+          price: 22,
+          image: image_path + 'silver_3.png'
+        },
+        s2: {
+          id: 2855,
+          price: 22,
+          image: image_path + 'silver_2.png'
+        },
+        s1: {
+          id: 2855,
+          price: 22,
+          image: image_path + 'silver_1.png'
+        },
+        g5: {
+          id: 2856,
+          price: 28,
+          image: image_path + 'gold_5.png'
+        },
+        g4: {
+          id: 2856,
+          price: 28,
+          image: image_path + 'gold_4.png'
+        },
+        g3: {
+          id: 2856,
+          price: 28,
+          image: image_path + 'gold_3.png'
+        },
+        g2: {
+          id: 2856,
+          price: 28,
+          image: image_path + 'gold_2.png'
+        },
+        g1: {
+          id: 2856,
+          price: 28,
+          image: image_path + 'gold_1.png'
+        },
+        p5: {
+          id: 2857,
+          price: 35,
+          image: image_path + 'platinum_5.png'
+        },
+        p4: {
+          id: 2857,
+          price: 35,
+          image: image_path + 'platinum_4.png'
+        },
+        p3: {
+          id: 2857,
+          price: 35,
+          image: image_path + 'platinum_3.png'
+        },
+        p2: {
+          id: 2857,
+          price: 35,
+          image: image_path + 'platinum_2.png'
+        },
+        p1: {
+          id: 2857,
+          price: 52,
+          image: image_path + 'platinum_1.png'
+        },
+        d5: {
+          id: 2858,
+          price: 80,
+          image: image_path + 'diamond_5.png'
+        },
+        d4: {
+          id: 2858,
+          price: 80,
+          image: image_path + 'diamond_4.png'
+        },
+        d3: {
+          id: 2858,
+          price: 80,
+          image: image_path + 'diamond_3.png'
+        },
+        d2: {
+          id: 2858,
+          price: 80,
+          image: image_path + 'diamond_2.png'
+        },
+        d1: {
+          id: 2858,
+          price: 80,
+          image: image_path + 'diamond_1.png'
+        },
+        c5: {
+          id: 2896,
+          price: 250,
+          image: image_path + 'challenger_1-2.png'
+        },
+        c4: {
+          id: 0,
+          price: 0,
+          image: image_path + 'challenger_1-2.png'
+        },
+        c3: {
+          id: 0,
+          price: 0,
+          image: image_path + 'challenger_1-2.png'
+        },
+        c2: {
+          id: 0,
+          price: 0,
+          image: image_path + 'challenger_1-2.png'
+        },
+        c1: {
+          id: 0,
+          price: 0,
+          image: image_path + 'challenger_1-2.png'
+        }
+      };
+     
+      this.currencyFormat = 'R$';
+      this.currencyDecimalSeparator = ',';
+     
+      this._errorMessages = {
+        dest_lt_cur: "Nível Desejado é menor que o Atual"
+      }
+      this._sequence = [
+        'b5','b4', 'b3', 'b2', 'b1',
+        's5','s4', 's3', 's2', 's1',
+        'g5','g4', 'g3', 'g2', 'g1',
+        'p5','p4', 'p3', 'p2', 'p1',
+        'd5','d4', 'd3', 'd2', 'd1',
+        'c5','c4', 'c3', 'c2', 'c1'
+      ];
+      this.errors = [];
+     
+     
+    // ============== PUBLIC METHODS ================
+     
+      // Need to set these settings
+      // this.selectCurrentTier = attrs['selectCurrentTier'];
+      // this.selectCurrentDivision = attrs['selectCurrentDivision'];
+      // this.currentWrapImage = attrs['currentWrapImage'];
+      // this.selectDestinationTier = attrs['selectDestinationTier'];
+      // this.selectDestinationDivision = attrs['selectDestinationDivision'];
+      // this.destinationWrapImage = attrs['destinationWrapImage'];
+      // this.priceContainer = attrs['priceContainer'];
+      // this.addToCartButton = attrs['addToCartButton'];
+      // this.addToCartUrl = attrs['addToCartUrl'];
+     
+      this.settings = function(attrs) {
+        for (var key in attrs) {
+          this[key] = attrs[key];
+        }
+        this._attachAddToCart();
+     
+        return this;
+      }
+     
+      this.change = function() {
+        this.ck = $(this.selectCurrentTier).val() + $(this.selectCurrentDivision).val();
+        this.dk = $(this.selectDestinationTier).val() + $(this.selectDestinationDivision).val();
+        this.current = this._products[this.ck];
+        this.destination = this._products[this.dk];
+     
+        this.updateImage();
+        var price = this.sumValue();
+        $(this.priceContainer).text(this._formatCurrency(price));
+        return this;
+      }
+     
+      this.updateImage = function() {
+        $(this.currentWrapImage).css('background-image', 'url(' + this.current.image + ')');
+        $(this.destinationWrapImage).css('background-image', 'url(' + this.destination.image + ')');
+     
+        if($(this.selectDestinationTier).val() == 'c') {
+            $(this.selectDestinationDivision).attr('disabled', 'disabled');
+        }
+        else {
+            $(this.selectDestinationDivision).removeAttr('disabled');
+                    }
+      }
+     
+      this.sumValue = function() {
+        this._getSequence();
+        if(this.i_dest < this.i_cur) {
+          this._addError('dest_gt_cur');
+          return false;
+        }
+     
+        var sum = 0;
+        this._execInSequence(function(p, k){
+          sum += p.price;
+        });
+        return sum;
+      }
+     
+      this.addToCart = function() {
+        var evo = this;
+        if(evo.beforeAddToCart) evo.beforeAddToCart();
+        evo._getSequence();
+     
+        var products = [];
+        evo._execInSequence(function(p){
+          products.push(p);
+        });
+     
+        function ajaxOrRedirectToCart(_products) {
+          var p = products.shift();
+          if(!p){
+            window.parent.location = evo.cartUrl;
+          }
+          var url = evo.addToCartUrl.replace('%product_id', p.id);
+          jQuery.get(url).success(function(){
+            ajaxOrRedirectToCart(_products);
+          });
+        }
+     
+        ajaxOrRedirectToCart(products);
+      }
+     
+      this.errorMessages = function () {
+        var trErrors = [];
+        for(var i = 0; i < this.errors.length; i++) {
+          var k = this.errors[i];
+          if(this._errorMessages[k]) {
+            trErrors.push(this._errorMessages[k]);
+          } else {
+            trErrors.push(k);
+          }
+          return trErrors;
+        }
+      }
+     
+    // ============== PRIVATE METHODS ================
+      this._getSequence = function() {
+        for(var i = 0; i < this._sequence.length; i++) {
+          if(this.ck === this._sequence[i]) {
+            this.i_cur = i;
+          }
+          if(this.dk === this._sequence[i]) {
+            this.i_dest = i;
+          }
+        }
+      }
+     
+      this._execInSequence = function(func) {
+        for(var i = this.i_cur + 1; i <= this.i_dest; i++) {
+          var p_key = this._sequence[i];
+          var product = this._products[p_key];
+          func(product, p_key);
+        }
+      }
+     
+      this._formatCurrency = function(val) {
+        var o = [];
+        var decPart = new String(parseInt((val - parseInt(val)) * Math.pow(10, this._currencyDecimalQty)) || 0);
+        var intPart = new String(parseInt(val) || 0);
+        if (decPart < 10) {
+          decPart = "0" + decPart;
+        }
+     
+        o.push(this.currencyFormat);
+        o.push(' ')
+        o.push(intPart);
+     
+        o.push(this.currencyDecimalSeparator);
+        o.push(decPart);
+     
+        return o.join('');
+      }
+     
+      this._attachAddToCart = function() {
+        var evo = this;
+        jQuery(evo.addToCartButton).click(function(){
+          evo.addToCart();
+        });
+      }
+     
+      this._addError = function(err) {
+        this.errors.push(err);
+      }
+     
+      this.init = function(attrs) {
+        if(attrs) {
+          this.settings(attrs);
+        }
+      }
+      this.init(attrs);
+    }
+     
+    $(function(){
+      var evo = new EloEvolution({
+        selectCurrentTier: '#ct',
+        selectCurrentDivision: '#cd',
+        selectDestinationTier: '#dt',
+        selectDestinationDivision: '#dd',
+        currentWrapImage: '#cti',
+        destinationWrapImage: '#dti',
+        priceContainer: '#price',
+        addToCartButton: '#cart',
+        addToCartUrl: '/?post_type=product&add-to-cart=%product_id',
+        cartUrl: '/carrinho',
+        beforeAddToCart: function() {
+          jQuery('#loader').show();
+        }
+      }).change();
+      $('#ct,#cd,#dt,#dd').change(function(){
+        // we need to call inside an anonymous function
+        // because we use `this`, inside evo.change function,
+        // referring to evo instance, instead the dom object
+        // that was changed.
+        evo.change();
+      });
+    });
+    </script>
+     
+    <style>
+     
+    * {
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+    }
+     
+    #content2 {
+      width:725px;
+      background:url('http://elodash.com/wp-content/uploads/2016/01/bg_calc.png') no-repeat center top;
+      height:410px;
+      background-size: 100%;
+    }
+     
+    .current_tier_img,
+    .desired_tier_img {
+      width: 192px;
+      height: 192px;
+      background-image: url(http://elodash.com/wp-content/uploads/2016/01/bronze_5.png);
+      text-align: center;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      background-repeat: no-repeat;
+      font-size: 18px;
+      position: absolute;
+      left: 50%;
+      top: 70px;
+      margin-left: -96px;
+    }
+     
+    #wrapper {position: relative;}
+     
+    .desired_tier_img {
+      margin-left:-94px;
+    }
+     
+    .desired_division {
+      background:#FFF;
+    }
+     
+    .current_tier_img span,
+    .desired_tier_img span,
+    #loader, h2 {display: none;}
+     
+    br {clear:both;}
+     
+    /*
+    #loader {
+      width: 100%;
+      height: 100%;
+      display: none;
+      background-color: #fff;
+      opacity: 0.9;
+      position: absolute;
+      text-align: center;
+      vertical-align: middle;
+      padding-top: 300px;
+    }*/
+     
+    .current_tier_division,
+    .desired_tier_division {
+      width:49%;
+      float:left;
+      margin-bottom:20px;
+      position: relative;
+    }
+     
+    #price {
+      position: absolute;
+      width: 100px;
+      left:50%;
+      text-align: center;
+      font-family: 'Trebuchet Ms';
+      color:#FFF;
+      margin-left:-50px;
+      top: 170px;
+      font-size: 18px;
+     
+    }
+     
+    #cart {
+      width: 150px;
+      height:72px;
+      position: absolute;
+      border: 0px;
+      background:url(http://elodash.com/wp-content/uploads/2016/01/bt_comprar.jpg) no-repeat center top;
+      left: 50%;
+      margin-left: -80px;
+      top: 220px;
+     
+    }
+     
+    #cart:hover {
+      cursor: pointer;
+      background:url(http://elodash.com/wp-content/uploads/2016/01/bt_comprar2.jpg) no-repeat center top;
+    }
+     
+    .current_tier,
+    .desired_tier {
+      background:#FFF;
+      position: absolute;
+      top: 250px;
+      left: 50%;
+      margin-left: -75px;
+      width: 150px;
+      height: 28px;
+      margin-left: -65px;
+      width: 130px;
+    }
+     
+    .current_tier select,
+    .desired_tier select {
+      border:0px;
+      background: none;
+      height: 28px;
+    }
+     
+    .current_tier select:first-child
+    .desired_tier select:first-child {
+      width:100px;
+    }
+     
+    .current_tier select:last-child,
+    .desired_tier select:last-child {
+      float:right;
+    }
+     
+    /*#price {
+    float: right;
+    padding: 5px 10px;
+    width: 83px;
+    text-align: right;
+    border: 1px dotted #d1d1d1;
+    background: #f1f1f1;
+    margin-right: 159px;}*/
+     
+    </style>
+    <link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/js/page_context.js"></script>
+     
+    <div id="loader">Adicionando produto no carrinho...<br>Obs: O tempo de espera depende da quantidade que for adicionado ao carrinho.<br><img src="http://elojob.com.br/calculadora/ajax-loading.gif"></div>
+    <div id="content2">
+      <div id="main_content">
+       
+        <div id="wrapper">
+          <div class="current_tier_division">
+            <div id="cti" class="current_tier_img" style="background-image: url(http://elojob.com.br/calculadora/tier/silver_1.png);"><span>Posição Atual</span></div>
+            <div class="current_tier">
+              <select id="ct">
+                <option value="b">Bronze</option>
+                <option value="s" selected="">Prata</option>
+                <option value="g">Ouro</option>
+                <option value="p">Platina</option>
+                <option value="d">Diamante</option>
+              </select>
+              <select id="cd">
+                <option>5</option>
+                <option>4</option>
+                <option>3</option>
+                <option>2</option>
+                <option selected="">1</option>
+              </select>
+            </div>
+          </div>
+          <div class="desired_tier_division">
+            <div id="dti" class="desired_tier_img" style="background-image: url(http://elojob.com.br/calculadora/tier/gold_5.png);"><span>Posição Desejada</span></div>
+            <div class="desired_tier">
+              <select id="dt">
+                <option value="b">Bronze</option>
+                <option value="s">Prata</option>
+                <option value="g" selected="">Ouro</option>
+                <option value="p">Platina</option>
+                <option value="d">Diamante</option>
+                                  <option value="c">Mestre</option>
+              </select>
+              <select id="dd">
+                <option selected="selected">5</option>
+                <option>4</option>
+                <option>3</option>
+                <option>2</option>
+                <option>1</option>
+              </select>
+            </div>
+          </div>
+          <div id="sv" class="server" style="display:none;">
+            <select>
+              <option>Brazil</option>
+            </select>      
+          </div>
+          <div class="vpn" style="display:none;">
+            <input name="VPN Protection" type="checkbox" value="VPN Protection" id="vpn_id">
+          </div>
+          <br>
+          <h2> VALOR </h2>
+          <div id="price">R$ 35,00</div>
+          <div>
+            <button id="cart"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+     
+    </center></body></html>
+    </body>
+    </html>

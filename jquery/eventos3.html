@@ -26,6 +26,43 @@
     <span id='resultado'></span>
 
     <script>
-        // ...
+        function exibirDadosEvento(e) {
+          $('#resultado').empty()
+          const div1 = $('<div>')
+          const div2 = $('<div>')
+
+          $('#resultado').append(div1, div2)
+
+          div1.append(`target: ${e.target.id}`)
+          // retorna o id do elemento
+
+          const rt = e.relatedTarget ? e.relatedTarget.tagName : null
+          // relatedTarget retorna true se o evento do elemento selecionado possui alguma relação com outro elemento
+          div1.append(`<br>relatedTarget: ${rt}`)
+          // retorna o elemento que esta associado com o evento do elemento selecionado
+          
+          div1.append(`<br>type: ${e.type}`)
+          // retorna o tipo do evento associado ao elemento selecionado
+
+          div1.append(`<br>wich: ${e.which}`)
+          // retorna o último botão pressionado
+
+          div1.append(`<br>metaKey: ${e.metaKey}`)
+          // retorna true ou false. true se o botão Windows está sendo segurado
+
+          div2.append(`pageX: ${e.pageX}`)
+          div2.append(`<br>pageY: ${e.pageY}`)
+          // pageX/Y retorna o o tamanho da página em largura e altura de acordo com o tamanho TOTAL da página, isso inclui a rolagem para baixo eu para lado
+
+          div2.append(`<br>clientX: ${e.clientX}`)
+          div2.append(`<br>clientY: ${e.clientY}`)
+          // clientX/Y retorna o tamanho da página em largura e altura de acordo com o bloco ATUAL, não inclui rolagens
+          const obs = e.data ? e.data.obs : null
+          // verifica se um novo dado foi passado como objeto e o retorna
+          div2.append(`<br>obs: ${obs}`)
+        }
+
+        $('#div1, #div2').on('mouseenter mouseleave', { obs:'Ok!' } ,exibirDadosEvento)
+        $('input').keyup(exibirDadosEvento)
     </script>
 </body>
